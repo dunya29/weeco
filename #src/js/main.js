@@ -185,3 +185,25 @@ function unshowScrollbar() {
 }
 unshowScrollbar()
 window.addEventListener("resize", unshowScrollbar)
+//choice-form 
+const choiceFormBtn = document.querySelector(".choice-form__btn")
+const modalOrderPlate = document.querySelector("#modalOrderPlate")
+if (choiceFormBtn) {
+  choiceFormBtn.addEventListener("click", ()=> {
+    let collection = document.querySelector(".choice-form input[name=collection]:checked").value
+    let color = document.querySelector(".choice-form input[name=color]:checked").value
+    let type = document.querySelector(".choice-form input[name=type]:checked").value
+    modalOrderPlate.querySelector("input[name=collection]").value = collection
+    modalOrderPlate.querySelector("input[name=color]").value = color
+    modalOrderPlate.querySelector("input[name=type]").value = type
+  })
+}
+const mobmenu = document.querySelector(".mobile-menu")
+mobmenu.querySelector(".button--primary").addEventListener("click", e => {
+  e.preventDefault()
+  burgerMenu.classList.toggle('_active');
+	mobileMenu.classList.toggle('_active');
+  setTimeout(() => {
+    $('#modalCallback').modal('show');
+  }, 400);
+})

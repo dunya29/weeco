@@ -9,6 +9,10 @@
   max-width: 1570px;
 }
 
+.fancybox__footer {
+  display: none;
+}
+
 .advantages-g::-webkit-scrollbar,
 .section-catalog__grid::-webkit-scrollbar,
 .comparison-table__responsive::-webkit-scrollbar,
@@ -290,7 +294,7 @@ ul.page-list li:before {
 .form .form__group.error input,
 .form .form__group.error textarea {
   color: #f00;
-  border: 1px soldi #f00;
+  border: 1px solid #f00;
 }
 
 .form__input {
@@ -592,6 +596,8 @@ ul.page-list li:before {
 
 .rating-wrapper .rating-item img {
   max-width: calc(100% - 5rem);
+  height: auto;
+  max-height: 3rem;
   -o-object-fit: contain;
   object-fit: contain;
 }
@@ -970,11 +976,13 @@ h2.h1 span {
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  cursor: pointer;
 }
 
 .choice-form__items label input:checked + span {
   color: #ffffff;
   background: #677385;
+  pointer-events: none;
 }
 
 .choice-form__img {
@@ -1234,6 +1242,11 @@ h2.h1 span {
 .consultation .button--primary {
   color: #2F3339;
   background: #ffffff;
+}
+
+.consultation .button--primary:hover {
+  color: #fff;
+  background-color: #2F3339;
 }
 
 .delivery h2.h1 {

@@ -6,9 +6,11 @@
             ["428903, Чувашская Республика, г. Чебоксары, Вурнарское шоссе д. 17, офис 311", 56.0946876, 47.2636723, "files/images/icons/map.svg"],
             ["428903, г. Мытищи, Ярмарочная 5. Навес 4-2 Россия, Московская обл,", 55.9255786, 37.7545311, "files/images/icons/map.svg"]
         ];
+        let LAT_VALUE =  56.2946876
+        let LONG_VALUE = 42.8545311
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 13,
-            center: new google.maps.LatLng(56.0946876, 47.2556723),
+            zoom: 5,//13,
+            center: new google.maps.LatLng(57.0146876, 30.2636723),
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             styles: [
         {
@@ -105,6 +107,18 @@
                 }
             })(marker, i));
         }
+        google.maps.event.addDomListener(window, "load", function() {
+            if (window.innerWidth < 992) {
+                map.setCenter({lat:LAT_VALUE, lng:LONG_VALUE}); 
+            }         
+        });
+        google.maps.event.addDomListener(window, "resize", function() {
+            if (window.innerWidth < 992) {
+                map.setCenter({lat:LAT_VALUE, lng:LONG_VALUE}); 
+            } else {
+                map.setCenter({lat:57.0146876, lng:30.2636723}); 
+            }        
+        });
     }
     
     
