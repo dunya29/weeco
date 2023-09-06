@@ -1,0 +1,115 @@
+<script>
+
+        
+    function initMap() {
+        var locations = [
+            ["428903, Чувашская Республика, г. Чебоксары, Вурнарское шоссе д. 17, офис 311", 56.0946876, 47.2636723, "/files/images/icons/map.svg"],
+            ["428903, г. Мытищи, Ярмарочная 5. Навес 4-2 Россия, Московская обл,", 55.9255786, 37.7545311, "/files/images/icons/map.svg"]
+        ];
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: new google.maps.LatLng(56.0946876, 47.2556723),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [
+        {
+            "featureType": "poi.attraction",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "poi.business",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "poi.government",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "poi.medical",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "poi.park",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "poi.place_of_worship",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "poi.school",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "poi.sports_complex",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        }
+    ]
+        });
+         
+        var infowindow = new google.maps.InfoWindow();
+        var marker, i;
+         
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map,
+                icon: {
+                    url: locations[i][3],
+                    scaledSize: new google.maps.Size(54, 68)
+                }
+            });
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
+    }
+    
+    
+
+
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtQv-wz22qUuKtjfMu95xTfAl6aqzUcmU&amp;libraries=places&amp;callback=initMap"></script>
