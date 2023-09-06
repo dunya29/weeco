@@ -4,6 +4,8 @@ var swiper = new Swiper(".rating-slider", {
 	slidesPerGroup: 1,
 	spaceBetween: 0,
 	loop: false,
+	observe: true,
+    observeParents: true,
 	navigation: {
         nextEl: ".rating-slider-next",
         prevEl: ".rating-slider-prev",
