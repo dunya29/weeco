@@ -37,26 +37,50 @@ body {
     background-color: #f2f2f5;
     border-radius: 10px;
 }
-.swiper-scrollbar-wrap {
+.swiper-scrollbar-wrap, .ps__rail-x {
     height: 15px;
     padding: 5px;
     background: rgba(0,0,0,.1);
     border-radius: 10px;
-    .swiper-scrollbar {
-        height: 5px;
-        background: transparent;
-        position: relative
-    }
-    .swiper-scrollbar-drag {
-        top: 0;
-        height: 5px;  
-        border-radius: 6px;
-        background: #85B73F;
-        cursor: pointer;
-    }
     &.lock {
         display: none;
     }
+}
+.swiper-scrollbar {
+    height: 5px;
+    background: transparent;
+    position: relative
+}
+.swiper-scrollbar-drag {
+    top: 0;
+    height: 5px;  
+    border-radius: 6px;
+    background: #85B73F;
+    cursor: pointer;
+}
+.ps__rail-x {
+    background: rgba(0,0,0,.1)!important;
+    opacity: 1!important;
+    padding: 5px;
+}
+.ps__thumb-x {
+    top: 5px;
+    height: 5px;
+    background: transparent!important;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        right: 5px;
+        top: 0;
+        bottom: 0;
+        background-color: #85B73F;
+        border-radius: 6px;
+    }
+}
+.ps__rail-x:hover > .ps__thumb-x, .ps__rail-x:focus > .ps__thumb-x, .ps__rail-x.ps--clicking .ps__thumb-x {
+    background-color: transparent;
+    height: 5px;
 }
 .payments__logos::-webkit-scrollbar-track {
     background-color: rgba(0, 3, 51, 0.05);

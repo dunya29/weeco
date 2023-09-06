@@ -186,17 +186,28 @@ function unshowScrollbar() {
 unshowScrollbar()
 window.addEventListener("resize", unshowScrollbar)
 //choice-form 
+const choiceForm = document.querySelector(".choice-form")
 const choiceFormBtn = document.querySelector(".choice-form__btn")
 const modalOrderPlate = document.querySelector("#modalOrderPlate")
 if (choiceFormBtn) {
   choiceFormBtn.addEventListener("click", ()=> {
-    let collection = document.querySelector(".choice-form input[name=collection]:checked").value
-    let color = document.querySelector(".choice-form input[name=color]:checked").value
-    let type = document.querySelector(".choice-form input[name=type]:checked").value
+    let collection = choiceForm.querySelector("input[name=collection]:checked").value
+    let color = choiceForm.querySelector("input[name=color]:checked").value
+    let type = choiceForm.querySelector("input[name=type]:checked").value
     modalOrderPlate.querySelector("input[name=collection]").value = collection
     modalOrderPlate.querySelector("input[name=color]").value = color
     modalOrderPlate.querySelector("input[name=type]").value = type
   })
+}
+function setChoiceImg(collection,type,color) {
+  let src = "img/" + collection + "-" + type + "-" + color
+    choiceForm.querySelector(".choice-form__img").innerHTML = `<picture>
+    <source srcset=${src}.jpg type="image/webp">
+    <img src=${src}.jpg alt="Выбор плитки">
+   </picture>`
+}
+if (choiceForm) {
+  setChoiceImg("berlin","corner-step360x360x23","brown")
 }
 const mobmenu = document.querySelector(".mobile-menu")
 mobmenu.querySelector(".button--primary").addEventListener("click", e => {
@@ -207,3 +218,4 @@ mobmenu.querySelector(".button--primary").addEventListener("click", e => {
     $('#modalCallback').modal('show');
   }, 400);
 })
+new PerfectScrollbar(".comparison-table__responsive")
