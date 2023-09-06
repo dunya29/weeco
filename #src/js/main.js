@@ -218,4 +218,6 @@ mobmenu.querySelector(".button--primary").addEventListener("click", e => {
     $('#modalCallback').modal('show');
   }, 400);
 })
-new PerfectScrollbar(".comparison-table__responsive")
+new PerfectScrollbar(".comparison-table__responsive", {
+  scrollXMarginOffset: 50
+})
