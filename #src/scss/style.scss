@@ -312,7 +312,16 @@ ul.page-list {
         .modal-dialog {
             max-width: calc(100% - 40px);
             margin: 0 auto;
-        }   
+        } 
+        .modal-body {
+            padding: 4rem 8px;
+        } 
+        .personal {
+            max-width: 304px;
+            a {
+                display: inline;
+            }
+        } 
     }
 }
 .modal-content {

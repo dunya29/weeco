@@ -2520,6 +2520,18 @@ h2.h1 span {
     margin: 0 auto;
   }
 
+  .modal .modal-body {
+    padding: 4rem 8px;
+  }
+
+  .modal .personal {
+    max-width: 304px;
+  }
+
+  .modal .personal a {
+    display: inline;
+  }
+
   .modal-content {
     border-radius: 3rem 0;
   }
