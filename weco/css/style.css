@@ -14,7 +14,7 @@
 }
 
 .comparison-table__responsive {
-  scrollbar-width: 0;
+  scrollbar-width: none;
 }
 
 .comparison-table__responsive::-webkit-scrollbar {
