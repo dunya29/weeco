@@ -13,9 +13,18 @@
   display: none;
 }
 
+.comparison-table__responsive {
+  scrollbar-width: 0;
+}
+
+.comparison-table__responsive::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 .advantages-g::-webkit-scrollbar,
 .section-catalog__grid::-webkit-scrollbar,
-.comparison-table__responsive::-webkit-scrollbar,
 .reviews-slider .swiper-wrapper::-webkit-scrollbar,
 .product-slider .swiper-wrapper::-webkit-scrollbar,
 .portfolio-slider .swiper-wrapper::-webkit-scrollbar,
@@ -96,7 +105,6 @@
 
 .advantages-g::-webkit-scrollbar-thumb,
 .section-catalog__grid::-webkit-scrollbar-thumb,
-.comparison-table__responsive::-webkit-scrollbar-thumb,
 .reviews-slider .swiper-wrapper::-webkit-scrollbar-thumb,
 .product-slider .swiper-wrapper::-webkit-scrollbar-thumb,
 .portfolio-slider .swiper-wrapper::-webkit-scrollbar-thumb,
