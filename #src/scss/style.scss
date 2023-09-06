@@ -92,12 +92,6 @@ body {
         background: rgba(0,0,0,.1);
         border-radius: 10px;
     }
-    @media (max-width: 575.98px) {
-        &:after {
-            left: 20px;
-            right: 20px;
-        }
-    }
 }
 .ps__thumb-x {
     top: 5px;
@@ -112,12 +106,6 @@ body {
         bottom: 0;
         background-color: #85B73F;
         border-radius: 6px;
-    }
-    @media (max-width: 575.98px) {
-        &:after {
-            left: 25px;
-            right: 25px;
-        }
     }
 }
 .ps__rail-x:hover > .ps__thumb-x, .ps__rail-x:focus > .ps__thumb-x, .ps__rail-x.ps--clicking .ps__thumb-x {
@@ -905,6 +893,22 @@ h2.h1 span {
 .comparison-table__responsive {
     padding-top: 4rem;
     padding-bottom: 4.5rem;
+    .ps__rail-x {
+        @media (max-width: 575.98px) {
+            &:after {
+                left: 20px;
+                right: 20px;
+            }
+        }
+    }
+    .ps__thumb-x {
+        @media (max-width: 575.98px) {
+            &:after {
+                left: 25px;
+                right: 25px;
+            }
+        }
+    }
     @media (max-width: 991.98px) {
         padding-bottom: 7rem;
     }
@@ -1912,6 +1916,10 @@ h2.h1 span {
         }
     }
     @media (max-width: 767.98px)  {
+        overflow: hidden;
+        .swiper {
+            overflow: visible;
+        }
         .swiper-wrapper {
             display: flex;
             gap: 0;

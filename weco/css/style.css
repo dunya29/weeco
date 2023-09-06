@@ -2513,6 +2513,14 @@ h2.h1 span {
     margin: 0 auto;
   }
 
+  .delivery {
+    overflow: hidden;
+  }
+
+  .delivery .swiper {
+    overflow: visible;
+  }
+
   .delivery .swiper-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2616,16 +2624,6 @@ h2.h1 span {
     font-weight: 500;
   }
 
-  .ps__rail-x:after {
-    left: 20px;
-    right: 20px;
-  }
-
-  .ps__thumb-x:after {
-    left: 25px;
-    right: 25px;
-  }
-
   .footer {
     padding: 3rem 0;
   }
@@ -2636,6 +2634,16 @@ h2.h1 span {
 
   .footer .col-md-12 {
     margin-top: 4rem;
+  }
+
+  .comparison-table__responsive .ps__rail-x:after {
+    left: 20px;
+    right: 20px;
+  }
+
+  .comparison-table__responsive .ps__thumb-x:after {
+    left: 25px;
+    right: 25px;
   }
 
   .comparison-table__responsive {
