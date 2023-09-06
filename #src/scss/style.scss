@@ -20,17 +20,22 @@ body {
 .fancybox__footer {
     display: none;
 }
-.comparison-table__responsive {
-   scrollbar-width: none;
-}
-.comparison-table__responsive::-webkit-scrollbar {
-    display: none;
-    width: 0;
-    height: 0;
+.advantages-g,
+.section-catalog__grid,
+.comparison-table__responsive,
+.reviews-slider .swiper-wrapper,
+.product-slider .swiper-wrapper,
+.portfolio-slider .swiper-wrapper,
+.certificate-slider .swiper-wrapper,
+.history-slider .swiper-wrapper,
+.personal-slider .swiper-wrapper,
+.cooperation-slider .swiper-wrapper,
+.rows-blog{
+    scrollbar-width: none;
 }
 .advantages-g::-webkit-scrollbar,
 .section-catalog__grid::-webkit-scrollbar,
-//.comparison-table__responsive::-webkit-scrollbar,
+.comparison-table__responsive::-webkit-scrollbar,
 .reviews-slider .swiper-wrapper::-webkit-scrollbar,
 .product-slider .swiper-wrapper::-webkit-scrollbar,
 .portfolio-slider .swiper-wrapper::-webkit-scrollbar,
@@ -38,13 +43,19 @@ body {
 .history-slider .swiper-wrapper::-webkit-scrollbar,
 .personal-slider .swiper-wrapper::-webkit-scrollbar,
 .cooperation-slider .swiper-wrapper::-webkit-scrollbar,
-.rows-blog::-webkit-scrollbar,
-.payments__logos::-webkit-scrollbar{
-    width: 100%;
-    height: 15px;
-    background-color: #f2f2f5;
-    border-radius: 10px;
+.rows-blog::-webkit-scrollbar{
+    display: none;
+     width: 0;
+     height: 0;
 }
+.custom-scroll {
+    scrollbar-width: none;
+ }
+ .custom-scroll::-webkit-scrollbar {
+     display: none;
+     width: 0;
+     height: 0;
+ }
 .swiper-scrollbar-wrap {
     height: 15px;
     padding: 5px;
@@ -112,29 +123,6 @@ body {
 .ps__rail-x:hover > .ps__thumb-x, .ps__rail-x:focus > .ps__thumb-x, .ps__rail-x.ps--clicking .ps__thumb-x {
     background-color: transparent;
     height: 5px;
-}
-.payments__logos::-webkit-scrollbar-track {
-    background-color: rgba(0, 3, 51, 0.05);
-    opacity: 0.05;
-    border-radius: 6px;
-}
-.advantages-g::-webkit-scrollbar-thumb,
-.section-catalog__grid::-webkit-scrollbar-thumb,
-//.comparison-table__responsive::-webkit-scrollbar-thumb,
-.reviews-slider .swiper-wrapper::-webkit-scrollbar-thumb,
-.product-slider .swiper-wrapper::-webkit-scrollbar-thumb,
-.portfolio-slider .swiper-wrapper::-webkit-scrollbar-thumb,
-.certificate-slider .swiper-wrapper::-webkit-scrollbar-thumb,
-.history-slider .swiper-wrapper::-webkit-scrollbar-thumb,
-.personal-slider .swiper-wrapper::-webkit-scrollbar-thumb,
-.cooperation-slider .swiper-wrapper::-webkit-scrollbar-thumb,
-.rows-blog::-webkit-scrollbar-thumb,
-.payments__logos::-webkit-scrollbar-thumb{
-  background: #85B73F;
-  border-radius: 6px;
-  border: 5px solid transparent;
-  border-radius: 10px;
-  background-clip: padding-box;
 }
 .section--bottom {
     @media (max-width: 1399.98px) {
@@ -915,6 +903,8 @@ h2.h1 span {
     }
 }
 .comparison-table__responsive {
+    padding-top: 4rem;
+    padding-bottom: 4.5rem;
     @media (max-width: 991.98px) {
         padding-bottom: 7rem;
     }
@@ -1073,7 +1063,7 @@ h2.h1 span {
             }
         }
         .advantages-g {
-           padding-bottom: 20px;
+           padding-bottom: 30px;
         }
         .advantages-g > * {
             width: 200px;

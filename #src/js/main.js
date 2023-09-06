@@ -65,7 +65,6 @@ if (document.querySelector(".work-gallery")) {
 }
 window.addEventListener("resize", workSwiper)
 
-
 //photo gallery swiper
 let initphotoSwiper = false
 let swiperphoto
@@ -137,6 +136,7 @@ if (document.querySelector(".delivery")) {
 	deliverySwiper();
 }
 window.addEventListener("resize", deliverySwiper)
+
 //certificate swiper 
 let certSwiper = new Swiper(".certificates-section .swiper", {
   slidesPerView: 1.15,
@@ -168,7 +168,7 @@ let certSwiper = new Swiper(".certificates-section .swiper", {
     },
   }
 });
-//unshow scrollbar when enabled
+//unshow swiper scrollbar when enabled
 const scrollBar = document.querySelectorAll(".swiper-scrollbar-wrap")
 function unshowScrollbar() {
   setTimeout(() => {
@@ -185,6 +185,7 @@ function unshowScrollbar() {
 }
 unshowScrollbar()
 window.addEventListener("resize", unshowScrollbar)
+
 //choice-form 
 const choiceForm = document.querySelector(".choice-form")
 const choiceFormBtn = document.querySelector(".choice-form__btn")
@@ -199,6 +200,7 @@ if (choiceFormBtn) {
     modalOrderPlate.querySelector("input[name=type]").value = type
   })
 }
+// set order form img
 function setChoiceImg(collection,type,color) {
   let src = "img/" + collection + "-" + type + "-" + color
     choiceForm.querySelector(".choice-form__img").innerHTML = `<picture>
@@ -209,6 +211,7 @@ function setChoiceImg(collection,type,color) {
 if (choiceForm) {
   setChoiceImg("berlin","corner-step360x360x23","brown")
 }
+//close menu 
 const mobmenu = document.querySelector(".mobile-menu")
 mobmenu.querySelector(".button--primary").addEventListener("click", e => {
   e.preventDefault()
@@ -218,6 +221,10 @@ mobmenu.querySelector(".button--primary").addEventListener("click", e => {
     $('#modalCallback').modal('show');
   }, 400);
 })
-new PerfectScrollbar(".comparison-table__responsive", {
-  scrollXMarginOffset: 50
-})
+//custom-scroll
+const customScrol = document.querySelectorAll(".custom-scroll")
+if (customScrol) {
+  customScrol.forEach(scroll => {
+    new PerfectScrollbar(scroll)
+  })
+}
