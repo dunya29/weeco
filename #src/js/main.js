@@ -202,14 +202,21 @@ if (choiceFormBtn) {
 }
 // set order form img
 function setChoiceImg(collection,type,color) {
-  let src = "img/" + collection + "-" + type + "-" + color
+  let src = "img/plitki/" + collection + "-" + type + "-" + color
     choiceForm.querySelector(".choice-form__img").innerHTML = `<picture>
     <source srcset=${src}.jpg type="image/webp">
     <img src=${src}.jpg alt="Выбор плитки">
    </picture>`
 }
 if (choiceForm) {
-  setChoiceImg("berlin","corner-step360x360x23","brown")
+  choiceForm.querySelectorAll("input[type=radio]").forEach(inp => {
+    inp.addEventListener("change", () => {
+      let collection = choiceForm.querySelector("input[name=collection]:checked").getAttribute("data-val")
+      let type = choiceForm.querySelector("input[name=type]:checked").getAttribute("data-val")
+      let color = choiceForm.querySelector("input[name=color]:checked").getAttribute("data-val")
+      setChoiceImg(collection,type,color)
+    })
+  })
 }
 //close menu 
 const mobmenu = document.querySelector(".mobile-menu")

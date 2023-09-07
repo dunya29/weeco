@@ -401,11 +401,11 @@
                                     <div class="choice-form__lbl">Коллекция</div>
                                     <div class="choice-form__items">
                                         <label>
-                                            <input type="radio" name="collection" value="Флоренция" checked>
+                                            <input type="radio" name="collection" value="Флоренция" data-val="florence" checked>
                                             <span>Флоренция</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="collection" value="Берлин">
+                                            <input type="radio" name="collection" value="Берлин" data-val="berlin">
                                             <span>Берлин</span>
                                         </label>
                                     </div>
@@ -414,19 +414,19 @@
                                     <div class="choice-form__lbl">Цвет</div>
                                     <div class="choice-form__items">
                                         <label>
-                                            <input type="radio" name="color" value="Терракот">
+                                            <input type="radio" name="color" value="Терракот" data-val="terracotta">
                                             <span>Терракот</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="color" value="Шоколад" checked>
+                                            <input type="radio" name="color" value="Шоколад" data-val="brown" checked>
                                             <span>Шоколад</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="color" value="Мокрый асфальт">
+                                            <input type="radio" name="color" data-val="dark-gray"  value="Мокрый асфальт">
                                             <span>Мокрый асфальт</span>
                                         </label>
                                         <label class="custom-color">
-                                            <input type="radio" name="color" value="Свой цвет">
+                                            <input type="radio" name="color" data-val="custom" value="Свой цвет">
                                             <span>Свой цвет</span>
                                         </label>
                                     </div>
@@ -435,21 +435,25 @@
                                     <div class="choice-form__lbl">Тип</div>
                                     <div class="choice-form__items">
                                         <label>
-                                            <input type="radio" name="type" value="Угловая ступень 360x360x23">
+                                            <input type="radio" name="type" value="Угловая ступень 360x360x23" data-val="corner-step360x360x23">
                                             <span>Угловая ступень 360x360x23</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="type" value="Базовая плитка 330x330x23">
+                                            <input type="radio" name="type" value="Базовая плитка 330x330x23" data-val="base-step360x360x23">
                                             <span>Базовая плитка 330x330x23</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="type" value="Фронтальная ступень 360x330x23" checked>
+                                            <input type="radio" name="type" value="Фронтальная ступень 360x330x23" data-val="front-step360x360x23" checked>
                                             <span>Фронтальная ступень 360x330x23</span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
                            <div class="media-cover choice-form__img">
+                            <picture>
+                                <source srcset="img/plitki/florence-front-step360x330x23-brown.jpg" type="image/webp">
+                                <img src="img/plitki/florence-front-step360x330x23-brown.jpg" alt="Выбор плитки">
+                               </picture>
                            </div>
                            <div class="choice-form__footer">
                             <div class="h2 choice-form__price">Цена: 1150 руб./шт</div>
