@@ -243,5 +243,10 @@ const customScrol = document.querySelectorAll(".custom-scroll")
 if (customScrol) {
   customScrol.forEach(scroll => {
     new PerfectScrollbar(scroll)
+    console.log(new PerfectScrollbar(scroll))
   })
 }
+const d = document.querySelector(".comparison-table__responsive")
+console.group(new SimpleBar(d, {
+  autoHide: false
+}))

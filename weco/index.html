@@ -16,7 +16,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-        
+        <link rel="stylesheet" href="css/simplebar.min.css">
         <link rel="stylesheet" href="files/libs/bootstrap/css/bootstrap.min.css"> 
         <link rel="stylesheet" href="files/libs/swiper/swiper-bundle.min.css">
         <link rel="stylesheet" href="files/libs/fancyapps/fancybox.css"> 
@@ -622,7 +622,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <h2 class="h1 section__title">Отличие ступеней We<span>Еco</span> от аналогов</h2>
-                                <div class="comparison-table__responsive custom-scroll">    
+                                <div class="comparison-table__responsive" data-simplebar>    
                                     <div class="comparison-table">
                                         <table class="comparison-table__tbl">
                                             <thead><tr><th></th><th>Плитка<br>WeEco</th><th>Керамогранитная плитка</th><th>Бетонная <br>плитка</th><th>Клинкерная <br>ступень</th><th>Террасная <br>доска</th></tr></thead>
@@ -1446,7 +1446,8 @@
             if(typeof jQuery == "undefined") {
                 document.write("<script src=\"/assets/components/lazyload/js/web/lib/jquery.min.js\" type=\"text/javascript\"><\/script>");
             }
-        </script>         
+        </script>   
+        <script src="js/libs/simplebar.js"></script>      
         <script src="assets/components/lazyload/js/web/lib/lazyload.js"></script>
         <script src="assets/components/lazyload/js/web/default.js"></script>
         <script src="assets/components/minishop2/js/web/default.js?v=ba5761da20"></script>

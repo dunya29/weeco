@@ -2112,3 +2112,24 @@ h2.h1 span {
         }
     }
 }
+
+
+
+
+.simplebar-track.simplebar-horizontal {
+    height: 15px;
+}
+.simplebar-track {
+    background: rgba(0,0,0,.1);
+    border-radius: 10px;
+}
+.simplebar-scrollbar:before {
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    opacity: 1;
+}
+.simplebar-scrollbar.simplebar-visible:before {
+    opacity: 1;
+}
