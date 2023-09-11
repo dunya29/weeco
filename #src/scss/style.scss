@@ -1007,6 +1007,11 @@ h2.h1 span {
         padding: 0 2rem;
         margin-top: var(--bs-gutter-y);
     }
+    &__text a {
+        font-size: 1.6rem;
+        color: #85B73F;
+        text-decoration: underline;
+    }
     @media (min-width: 992px) and (max-width: 1399.98px) {
         .section__title {
             max-width: 30rem;
@@ -1366,7 +1371,6 @@ h2.h1 span {
 .choice-form {    
     display: grid;
     grid-template-columns: 5.3fr 3.7fr;
-    grid-template-rows: repeat(3, auto);
     align-items: start;
     gap: 0 30px;
     background: transparent;
@@ -1408,10 +1412,12 @@ h2.h1 span {
         }
     }
 	&__img {
-        grid-row: 1/4;
-        border-radius: 0px 40px 0px 45px; 
-        padding-top: 78.4%;
-        
+        grid-row: 1/5;
+        img {
+            position: static;
+            border-radius: 0px 40px 0px 45px;
+            height: auto;
+        }
     }
 	&__footer {
         margin-top: 30px;
@@ -1493,10 +1499,6 @@ h2.h1 span {
             max-width: 22rem;
             min-height: 175px;
             margin: 2rem 0;
-            padding-top: 0;
-            img {
-                position: static;
-             }
         }
         &__items {
             margin: 8px -6px -12px;
@@ -1727,11 +1729,6 @@ h2.h1 span {
             }
         }
     }
-}
-.advantages__text a {
-    font-size: 1.6rem;
-    color: #85B73F;
-    text-decoration: underline;
 }
 .consultation {
     background: #85B73F;

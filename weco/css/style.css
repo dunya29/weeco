@@ -789,6 +789,12 @@ h2.h1 span {
   margin-top: var(--bs-gutter-y);
 }
 
+.advantages__text a {
+  font-size: 1.6rem;
+  color: #85B73F;
+  text-decoration: underline;
+}
+
 .certificate-container {
   margin-bottom: -5rem;
 }
@@ -962,7 +968,6 @@ h2.h1 span {
 .choice-form {
   display: grid;
   grid-template-columns: 5.3fr 3.7fr;
-  grid-template-rows: repeat(3, auto);
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
@@ -1022,9 +1027,13 @@ h2.h1 span {
 }
 
 .choice-form__img {
-  grid-row: 1/4;
+  grid-row: 1/5;
+}
+
+.choice-form__img img {
+  position: static;
   border-radius: 0px 40px 0px 45px;
-  padding-top: 78.4%;
+  height: auto;
 }
 
 .choice-form__footer {
@@ -1197,12 +1206,6 @@ h2.h1 span {
   -webkit-transform: translate(0);
   -ms-transform: translate(0);
   transform: translate(0);
-}
-
-.advantages__text a {
-  font-size: 1.6rem;
-  color: #85B73F;
-  text-decoration: underline;
 }
 
 .consultation {
@@ -2418,11 +2421,6 @@ h2.h1 span {
     max-width: 22rem;
     min-height: 175px;
     margin: 2rem 0;
-    padding-top: 0;
-  }
-
-  .choice-form__img img {
-    position: static;
   }
 
   .choice-form__items {
