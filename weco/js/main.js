@@ -1,3 +1,4 @@
+
 let mobile = 768
 // formSuccess
 function formSuccess(form) {
@@ -137,37 +138,6 @@ if (document.querySelector(".delivery")) {
 }
 window.addEventListener("resize", deliverySwiper)
 
-//certificate swiper 
-let certSwiper = new Swiper(".certificates-section .swiper", {
-  slidesPerView: 1.15,
-  spaceBetween: 30,
-  observe: true,
-  observeParents: true,
-  loop: false,
-  scrollbar: {
-    el: '.certificates-section .swiper-scrollbar',
-    draggable: true
-  },
-  speed: 800,
-  breakpoints: {
-    576.98: {
-      slidesPerView: 2.4,
-      spaceBetween: 30,
-    },
-    991.98: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-    },
-    1199.98: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-    },
-    1399.98: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-    },
-  }
-});
 //unshow swiper scrollbar when enabled
 const scrollBar = document.querySelectorAll(".swiper-scrollbar-wrap")
 function unshowScrollbar() {
@@ -202,6 +172,7 @@ if (choiceFormBtn) {
 }
 // set order form img
 function setChoiceImg() {
+  choiceForm.querySelector(".choice-form__img").computedStyleMap.opacity = "0"
   let collection = choiceForm.querySelector("input[name=collection]:checked").getAttribute("data-val")
   let type = choiceForm.querySelector("input[name=type]:checked").getAttribute("data-val")
   let color = choiceForm.querySelector("input[name=color]:checked").getAttribute("data-val")
@@ -210,6 +181,7 @@ function setChoiceImg() {
     <source srcset=${src}.jpg type="image/webp">
     <img src=${src}.jpg alt="Выбор плитки">
    </picture>`
+   choiceForm.querySelector(".choice-form__img").computedStyleMap.opacity = "1"
 }
 function setPrice() {
   let collPrice = +choiceForm.querySelector("input[name=collection]:checked").getAttribute("data-price")
@@ -238,3 +210,4 @@ mobmenu.querySelector(".button--primary").addEventListener("click", e => {
     $('#modalCallback').modal('show');
   }, 400);
 })
+console.log(swiper)
