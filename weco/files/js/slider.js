@@ -149,7 +149,7 @@ function swiperDesctop() {
 			
 
 			// certificate slider
-			swiper = new Swiper(".certificate-slider", {
+			/* swiper = new Swiper(".certificate-slider", {
 				slidesPerView: 4,
 				spaceBetween: 30,
 				loop: false,
@@ -167,7 +167,7 @@ function swiperDesctop() {
 						spaceBetween: 30,
 					}
 				}
-			}); 
+			}); */
 			
 			// history-slider
 			swiper = new Swiper(".history-slider", {
