@@ -218,7 +218,8 @@ function loadYT() {
 }
 
 const lazyVid = document.querySelectorAll(".lazyload-video")
-lazyVid.forEach(vid => {
+if (lazyVid) {
+  lazyVid.forEach(vid => {
     vid.addEventListener("click", function lazyVidOnClick() {
       let regex = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/|shorts\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/
       let url = vid.getAttribute("data-src");
@@ -233,3 +234,4 @@ lazyVid.forEach(vid => {
       vid.removeEventListener("click", lazyVidOnClick)
     })
 })
+}
