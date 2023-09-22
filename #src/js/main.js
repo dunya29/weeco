@@ -210,4 +210,26 @@ mobmenu.querySelector(".button--primary").addEventListener("click", e => {
     $('#modalCallback').modal('show');
   }, 400);
 })
-console.log(swiper)
+function loadYT() {
+  let tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  let firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+}
+
+const lazyVid = document.querySelectorAll(".lazyload-video")
+lazyVid.forEach(vid => {
+    vid.addEventListener("click", function lazyVidOnClick() {
+      let regex = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/|shorts\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/
+      let url = vid.getAttribute("data-src");
+      let videoId = url.match(regex)[1]
+      let iframe = document.createElement( "iframe" );
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+      iframe.setAttribute("src", "https://www.youtube.com/embed/"+ videoId +"?rel=0&showinfo=0&autoplay=1");
+      vid.innerHTML = "";
+      vid.appendChild( iframe );
+      vid.removeEventListener("click", lazyVidOnClick)
+    })
+})

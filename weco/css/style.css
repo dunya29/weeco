@@ -66,6 +66,33 @@
   font-size: 3rem;
 }
 
+.about-hero .breadcrumbs {
+  margin-left: -1.5rem;
+}
+
+.about-hero .breadcrumbs span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.lazyload-video {
+  cursor: pointer;
+}
+
+.about-section__video img,
+.about-section__video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.about-section__video iframe {
+  z-index: 2;
+}
+
 .media-cover {
   display: block;
   position: relative;
@@ -803,7 +830,7 @@ h2.section__title span {
 }
 
 .choice-form__items label span {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   display: block;
   padding: 6px 16px;
   border-radius: 8px;
@@ -1267,10 +1294,6 @@ h2.section__title span {
   .choice-form .section__title {
     padding: 3rem 0 2rem;
     margin-bottom: 2rem;
-  }
-
-  .choice-form__items label span {
-    font-size: 1.6rem;
   }
 
   .choice-form__footer {
