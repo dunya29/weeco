@@ -70,6 +70,11 @@
   margin-left: -1.5rem;
 }
 
+.about-hero .breadcrumbs svg {
+  stroke: rgba(255, 255, 255, 0.7);
+}
+
+.about-hero .breadcrumbs a,
 .about-hero .breadcrumbs span {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -311,7 +316,7 @@ ul.page-list li:before {
 }
 
 .file-form {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .file-form.error .file-form__txt {
@@ -320,6 +325,18 @@ ul.page-list li:before {
 
 .file-form.error .file-form__error {
   display: block;
+}
+
+.file-form.error .file-form__lbl {
+  display: block;
+}
+
+.file-form.error .file-form__name {
+  display: none;
+}
+
+.file-form.error label svg {
+  fill: #f00;
 }
 
 .file-form.checked .file-form__lbl {
@@ -448,7 +465,21 @@ ul.page-list li:before {
   padding: 9rem 0 5rem;
 }
 
-.hero-product .container {
+.hero-product .breadcrumbs {
+  margin-left: -1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-product .breadcrumbs svg {
+  stroke: rgba(255, 255, 255, 0.7);
+}
+
+.hero-product .breadcrumbs a,
+.hero-product .breadcrumbs span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-product__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,12 +529,12 @@ ul.page-list li:before {
 
 .hero-form__header {
   border-bottom: 3px solid #2F3339;
-  margin-bottom: 37px;
+  margin-bottom: 20px;
 }
 
 .hero-form__header .h3 {
   line-height: 1.4;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .hero-form .button--primary {
@@ -1252,6 +1283,52 @@ h2.section__title span {
   display: block;
   max-width: 100%;
   max-height: 100%;
+}
+
+.fixed-btn {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 99999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.fixed-btn p {
+  padding: 0px 16px;
+  line-height: 1.6;
+  font-size: 15px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 10px;
+  margin: 0px 10px;
+  -webkit-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transform-origin: center right;
+  -ms-transform-origin: center right;
+  transform-origin: center right;
+}
+
+.fixed-btn:hover p {
+  display: block;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 @media only screen and (min-width: 991px) {

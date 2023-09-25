@@ -1,5 +1,17 @@
 
 let mobile = 768
+let fixedBtn = document.querySelector(".fixed-btn")
+function setFixedBtnLink() {
+  if (window.innerWidth > 1024) {
+    fixedBtn.setAttribute("href", "https://web.whatsapp.com/send?phone=79279983383&text=")
+  } else {
+    fixedBtn.setAttribute("href", "https://api.whatsapp.com/send?phone=79279983383")
+  }
+}
+if (fixedBtn) {
+  setFixedBtnLink()
+  window.addEventListener("resize",setFixedBtnLink)
+} 
 // formSuccess
 function formSuccess(form) {
   form.querySelectorAll(".form__group").forEach(item => item.classList.remove("error"))
@@ -14,6 +26,7 @@ function formSuccess(form) {
   }
   if (form.querySelector(".file-form")) {
     form.querySelector(".file-form").classList.remove("checked")
+    form.querySelector(".file-form").classList.remove("error")
     form.querySelector(".file-form__name").textContent = ""
   }
   let modal = document.querySelector(".modal.show")
@@ -28,11 +41,19 @@ document.querySelectorAll(".file-form").forEach(item => {
 	  let files = e.target.files
 	  for (let i = 0; i < files.length; i++) {
 		let file = files[i]
+    item.classList.remove("error")
 		item.classList.add("checked")
 		item.querySelector(".file-form__name").textContent = file.name
 	  }
 	})
 })
+//file-form error
+function fileFormOnError(formGroup) {
+  formGroup.classList.remove("checked")
+  formGroup.classList.add("error")
+  formGroup.querySelector("input").value = ""
+  formGroup.querySelector(".file-form__name").textContent =""
+}
 //work swiper
 let initworkSwiper = false
 let swiperwork
@@ -221,16 +242,34 @@ const lazyVid = document.querySelectorAll(".lazyload-video")
 if (lazyVid) {
   lazyVid.forEach(vid => {
     vid.addEventListener("click", function lazyVidOnClick() {
-      let regex = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/|shorts\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/
-      let url = vid.getAttribute("data-src");
-      let videoId = url.match(regex)[1]
-      let iframe = document.createElement( "iframe" );
-      iframe.setAttribute("frameborder", "0");
-      iframe.setAttribute("allowfullscreen", "");
-      iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
-      iframe.setAttribute("src", "https://www.youtube.com/embed/"+ videoId +"?rel=0&showinfo=0&autoplay=1");
-      vid.innerHTML = "";
-      vid.appendChild( iframe );
+      if (vid.querySelector("video")) {    
+        let url = vid.getAttribute("data-src"); 
+        let webmUrl = vid.getAttribute("data-webm");
+        let webm = "" !== vid.querySelector("video").canPlayType('video/webm; codecs="vp8, vorbis"')
+        if (webm && webmUrl) {
+          vid.querySelector("video").innerHTML = `<source src=${url} type='video/webm'>`
+        } else {
+          vid.querySelector("video").innerHTML = `<source src=${url}>`
+        }
+        setTimeout(() => {
+          vid.querySelector("video").play()
+          vid.querySelector("video").controls = true
+          vid.querySelector("video").style.zIndex = 2
+        }, 0);
+        
+      } else {
+        let regex = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/|shorts\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/
+        let url = vid.getAttribute("data-src");
+        let videoId = url.match(regex)[1]
+        let iframe = document.createElement( "iframe" );
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+        iframe.setAttribute("src", "https://www.youtube.com/embed/"+ videoId +"?rel=0&showinfo=0&autoplay=1");
+        vid.innerHTML = "";
+        vid.appendChild( iframe );  
+        vid.querySelector("iframe").muted = true
+      }
       vid.removeEventListener("click", lazyVidOnClick)
     })
 })
