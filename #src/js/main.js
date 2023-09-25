@@ -247,7 +247,7 @@ if (lazyVid) {
         let webmUrl = vid.getAttribute("data-webm");
         let webm = "" !== vid.querySelector("video").canPlayType('video/webm; codecs="vp8, vorbis"')
         if (webm && webmUrl) {
-          vid.querySelector("video").innerHTML = `<source src=${url} type='video/webm'>`
+          vid.querySelector("video").innerHTML = `<source src=${webmUrl} type='video/webm'>`
         } else {
           vid.querySelector("video").innerHTML = `<source src=${url}>`
         }
