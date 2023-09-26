@@ -242,22 +242,22 @@ const lazyVid = document.querySelectorAll(".lazyload-video")
 if (lazyVid) {
   lazyVid.forEach(vid => {
     vid.addEventListener("click", function lazyVidOnClick() {
-      if (vid.querySelector("video")) {    
+  /*     if (vid.querySelector("video")) {    
         let url = vid.getAttribute("data-src"); 
         let webmUrl = vid.getAttribute("data-webm");
         let webm = "" !== vid.querySelector("video").canPlayType('video/webm; codecs="vp8, vorbis"')
         if (webm && webmUrl) {
-          vid.querySelector("video").innerHTML = `<source src=${webmUrl} type='video/webm'>`
+          vid.querySelector("video").innerHTML = `<source src="${webmUrl}" type='video/webm'>`
         } else {
-          vid.querySelector("video").innerHTML = `<source src=${url}>`
+          vid.querySelector("video").innerHTML = `<source src="${url}">`
         }
         setTimeout(() => {
           vid.querySelector("video").play()
           vid.querySelector("video").controls = true
           vid.querySelector("video").style.zIndex = 2
-        }, 0);
+        }, 0); 
         
-      } else {
+      } else {*/
         let regex = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/|shorts\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/
         let url = vid.getAttribute("data-src");
         let videoId = url.match(regex)[1]
@@ -269,7 +269,7 @@ if (lazyVid) {
         vid.innerHTML = "";
         vid.appendChild( iframe );  
         vid.querySelector("iframe").muted = true
-      }
+     // }
       vid.removeEventListener("click", lazyVidOnClick)
     })
 })
