@@ -255,7 +255,9 @@
                         <div class="about-section__right">
                             <div class="about-section__content">
                                 <h2 class="section__title">Почему ступени We<span>Eco</span> инновационные?</h2>
-                                <p>Укладка плитки достаточно простая, с помощью раствора, дюбелей и саморезов, в любое время года. Пори этом плитка  не требует дорогих клеев и идеального основания. Плитка аккуратно ложится на поверхность и выглядит очень красиво, а имеющиеся цветовые гаммы позволят «поиграть» с дизайном, либо положить плитку в классической однотонной гамме.</p>    
+                                <div class="read-more">
+                                    <p>Укладка плитки достаточно простая, с помощью раствора, дюбелей и саморезов, в любое время года. Пори этом плитка  не требует дорогих клеев и идеального основания. Плитка аккуратно ложится на поверхность и выглядит очень красиво, а имеющиеся цветовые гаммы позволят «поиграть» с дизайном, либо положить плитку в классической однотонной гамме.</p>    
+                                 </div>                                                        
                                 <div class="about-section__items">
                                     <div class="about-section__item">
                                         <svg><use xlink:href="files/images/icons/sprite.svg#garanty"></use></svg>
@@ -501,7 +503,10 @@
                         <div class="about-section__right">
                             <div class="about-section__content">
                                 <h2 class="section__title">Видео - инструкция по монтажу ступеней We<span>Eco</span></h2>
-                                <p>Укладка плитки достаточно простая, с помощью раствора, дюбелей и саморезов, в любое время года. Пори этом плитка  не требует дорогих клеев и идеального основания. Плитка аккуратно ложится на поверхность и выглядит очень красиво, а имеющиеся цветовые гаммы позволят «поиграть» с дизайном, либо положить плитку в классической однотонной гамме.</p>    
+                                <div class="read-more">
+                                    <p>Укладка плитки достаточно простая, с помощью раствора, дюбелей и саморезов, в любое время года. Пори этом плитка  не требует дорогих клеев и идеального основания. Плитка аккуратно ложится на поверхность и выглядит очень красиво, а имеющиеся цветовые гаммы позволят «поиграть» с дизайном, либо положить плитку в классической однотонной гамме.</p>    
+                                    <p>Укладка плитки достаточно простая, с помощью раствора, дюбелей и саморезов, в любое время года. Пори этом плитка  не требует дорогих клеев и идеального основания. Плитка аккуратно ложится на поверхность и выглядит очень красиво, а имеющиеся цветовые гаммы позволят «поиграть» с дизайном, либо положить плитку в классической однотонной гамме.</p>                                 
+                                </div>
                                 <button type="button" class="button button--primary" data-bs-toggle="modal" data-bs-target="#modalCallback">Задать вопрос</button>
                             </div>
                         </div>
@@ -637,6 +642,7 @@
                                 <h3>г. Мытищи, Ярмарочная 5. Навес 4-2 Россия, Московская обл, </h3>
                                 <h3>г. Чебоксары, Вурнарское шоссе д. 17, офис 311</h3>
                             </div>  
+                            <button type="button" class="button button--primary button--fluid mt-5" data-bs-toggle="modal" data-bs-target="#modalPickup"><span>Оставить заявку на Самовывоз</span></button>                       
                         </div>
                     </div>
                 </section>
@@ -862,6 +868,37 @@
                 </g>
             </svg>
         </a>
+         <!--modalPickup-->
+         <div class="modal fade" id="modalPickup" tabindex="-1" aria-labelledby="modalPickup" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="modal-close up" data-bs-dismiss="modal" aria-label="Close">
+                            <svg fill="currentColor"><use href="files/images/icons/sprite.svg#x-lg"></use></svg>
+                        </button>
+                        <div class="h3 modal-title" id="modalTitle">Оставьте заявку на самовывоз</div>
+                        <form action="" method="post" class="form">
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="*Имя" name="name" value="">
+                            </div>
+                            <div class="form__group">
+                                <input type="text" class="form__input phonemask" placeholder="*Телефон" name="phone" value="">
+                            </div>
+                            <div class="form-group">
+                                <select >
+                                    <option>г. Мытищи, Ярмарочная 5. Навес 4-2 Россия, Московская обл,</option>
+                                    <option>г. Чебоксары, Вурнарское шоссе д. 17, офис 311</option>      
+                                  </select>
+                            </div>
+                            <div class="form__group">
+                                <button type="submit" class="button button--primary button--fluid">Отправить</button>
+                            </div>
+                            <p class="personal">Нажимая на кнопку «Отправить», я даю согласие на <a href="policy.html" target="_blank">обработку персональных данных</a></p>
+                       </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--modalCalculate1-->
         <div class="modal fade" id="modalCalculate1" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">

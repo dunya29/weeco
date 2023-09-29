@@ -1,0 +1,26 @@
+<section class="section section--bottom">
+	<div class="container">
+		<h3 class="h1 section__title">{if $_modx->resource.more_product_title}{$_modx->resource.more_product_title}{else}Еще товары из этой коллекции:{/if}</h3>
+	<!--</div>-->
+	<div class="position-relative">
+	<!--<div class="container-right position-relative">-->
+		<!--<div class="container-right__left"></div>-->
+		<!--<div class="container-right__right position-relative">-->
+			<div class="swiper product-slider">
+				<div class="swiper-wrapper">
+				    {$output}
+				    
+				    
+				</div>
+			</div>
+			<div class="product-slider__buttons slider-buttons">
+				<div class="swiper-btn swiper-btn--prev slider-buttons__prev">
+					<svg><use xlink:href="files/images/icons/sprite.svg#btn-prev"></use></svg>
+				</div>
+				<div class="swiper-btn swiper-btn--next slider-buttons__next">
+					<svg><use xlink:href="files/images/icons/sprite.svg#btn-next"></use></svg>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

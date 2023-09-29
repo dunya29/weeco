@@ -1,4 +1,38 @@
 
+.swiper-btn {
+    width: 23px;
+    height: 23px;
+    svg {
+        max-width: 100%;
+        max-height: 100%;
+        stroke: #85B73F;
+        pointer-events: none;
+    }
+}
+.swiper-button-disabled {
+    opacity: 0;
+}
+.product-slider {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    .swiper-slide {
+        height: auto;
+    }
+    @media (max-width: 991.98px) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.product-slider__buttons {
+    left: 0;
+    top: 30px;
+    width: 100%;
+    justify-content: space-between;
+    .swiper-btn {
+        width: 33px;
+        height: 35px;
+    }
+}
 .fancybox__footer {
     display: none;
 }
@@ -10,6 +44,67 @@
      width: 0;
      height: 0;
 } 
+[data-readmore-toggle]{
+    display: block;
+}
+.pagination {
+    --bs-pagination-color: #85B73F;
+    --bs-pagination-hover-color: #75a136;
+    --bs-pagination-focus-color:  #75a136;
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(133, 183, 63, 0.25);
+    --bs-pagination-active-bg: #85B73F;
+    --bs-pagination-active-border-color: #85B73F;
+}
+.hero-advantages__title {
+    @media (max-width:575.98px) {
+        padding-left: 3rem;
+    }
+}
+.about-hero__list li:before,.hero-advantages__title:before {
+    width: 2rem;
+    height: 2rem;
+    background: url(../files/images/icons/arrow-bottom-green.svg) center/contain no-repeat;
+    top: 0.6rem;
+    @media (max-width:1399.98px) {
+        top: 0.2rem;
+    }
+    @media (max-width:575.98px) {
+        top: 0;
+    }
+    @media (max-width:575.98px) {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+.product-tabs.delivery-nav-pills {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+    li {
+        max-width: 50%;
+    }
+    &:after {
+        content: "";
+        width: 2px;
+        background-color: #85B73F;
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        bottom: 12px;
+        transform: translateX(-50%) rotate(-10deg);
+    }
+    @media (max-width: 480.98px) {
+        button {
+           font-size: 1.6rem; 
+        } 
+    }
+}
+.product-tabs__button {
+    @media (max-width:575.98px) {
+        height: 100%;
+        padding: 1rem;
+    }
+}
 .swiper-scrollbar-wrap {
     height: 15px;
     padding: 5px;
@@ -77,8 +172,17 @@
 .about-hero .breadcrumbs span {
     color: rgb(255 255 255 / 70%)
 }
+.about-hero .hero-img {
+    @media (max-width: 575.98px) {
+        height: 100%;
+    }
+}
 .lazyload-video {
     cursor: pointer;
+}
+.about-section__video {
+    clip-path: inset(1px 1px);
+    margin-left: -1px;
 }
 .about-section__video img, .about-section__video iframe {
     position: absolute;
@@ -404,14 +508,6 @@ ul.page-list {
     h1 {
         margin-bottom: 5rem;
     }
-    .hero-advantages__title:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    .hero-advantages__title {
-        padding: 14px 0 0;
-    }
     .hero-img {
         width: 100%;
         height: 100%;
@@ -444,6 +540,9 @@ ul.page-list {
         .hero-advantages__title {
             font-size: 20px;
             line-height: 1.1;
+        }
+        .hero-advantages__title:before {
+            top: 0;
         }
     }
     @media (max-width: 767.98px) {
@@ -1553,6 +1652,10 @@ h2.section__title span {
             border-bottom: 3px solid #ffffff;
             margin-bottom: 4rem;
         }
+        .button--primary {
+            color: #2f3339;
+            background: #fff;
+        }
     }
     &__address {
         h3 {
@@ -1734,6 +1837,22 @@ h2.section__title span {
             display: block;
             transform: scale(1);
         }
+    }
+}
+#modalPickup select {
+    word-wrap: normal;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 0px;
+    text-transform: initial;
+    color: #40454c;
+    outline: none;
+    margin-bottom: 2rem;
+    option {
+        text-wrap: wrap;
     }
 }
 

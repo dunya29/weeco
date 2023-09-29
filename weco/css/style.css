@@ -1,5 +1,44 @@
 @charset "UTF-8";
 
+.swiper-btn {
+  width: 23px;
+  height: 23px;
+}
+
+.swiper-btn svg {
+  max-width: 100%;
+  max-height: 100%;
+  stroke: #85B73F;
+  pointer-events: none;
+}
+
+.swiper-button-disabled {
+  opacity: 0;
+}
+
+.product-slider {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.product-slider .swiper-slide {
+  height: auto;
+}
+
+.product-slider__buttons {
+  left: 0;
+  top: 30px;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.product-slider__buttons .swiper-btn {
+  width: 33px;
+  height: 35px;
+}
+
 .fancybox__footer {
   display: none;
 }
@@ -12,6 +51,53 @@
   display: none;
   width: 0;
   height: 0;
+}
+
+[data-readmore-toggle] {
+  display: block;
+}
+
+.pagination {
+  --bs-pagination-color: #85B73F;
+  --bs-pagination-hover-color: #75a136;
+  --bs-pagination-focus-color: #75a136;
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(133, 183, 63, 0.25);
+  --bs-pagination-active-bg: #85B73F;
+  --bs-pagination-active-border-color: #85B73F;
+}
+
+.about-hero__list li:before,
+.hero-advantages__title:before {
+  width: 2rem;
+  height: 2rem;
+  background: url(../files/images/icons/arrow-bottom-green.svg) center/contain no-repeat;
+  top: 0.6rem;
+}
+
+.product-tabs.delivery-nav-pills {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.product-tabs.delivery-nav-pills li {
+  max-width: 50%;
+}
+
+.product-tabs.delivery-nav-pills:after {
+  content: "";
+  width: 2px;
+  background-color: #85B73F;
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  bottom: 12px;
+  -webkit-transform: translateX(-50%) rotate(-10deg);
+  -ms-transform: translateX(-50%) rotate(-10deg);
+  transform: translateX(-50%) rotate(-10deg);
 }
 
 .swiper-scrollbar-wrap {
@@ -81,6 +167,12 @@
 
 .lazyload-video {
   cursor: pointer;
+}
+
+.about-section__video {
+  -webkit-clip-path: inset(1px 1px);
+  clip-path: inset(1px 1px);
+  margin-left: -1px;
 }
 
 .about-section__video img,
@@ -490,16 +582,6 @@ ul.page-list li:before {
 
 .hero-product h1 {
   margin-bottom: 5rem;
-}
-
-.hero-product .hero-advantages__title:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hero-product .hero-advantages__title {
-  padding: 14px 0 0;
 }
 
 .hero-product .hero-img {
@@ -1223,6 +1305,11 @@ h2.section__title span {
   margin-bottom: 4rem;
 }
 
+.main-map__content .button--primary {
+  color: #2f3339;
+  background: #fff;
+}
+
 .main-map__address h3 {
   line-height: 1.4;
   margin-bottom: 4rem;
@@ -1330,6 +1417,27 @@ h2.section__title span {
   -ms-transform: scale(1);
   transform: scale(1);
 }
+.main-map__content .button--primary {
+  color: #2f3339;
+  background: #fff;
+}
+#modalPickup select {
+  word-wrap: normal;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 0px;
+  text-transform: initial;
+  color: #40454c;
+  outline: none;
+  margin-bottom: 2rem;
+}
+
+#modalPickup select option {
+  text-wrap: wrap;
+}
 
 @media only screen and (min-width: 991px) {
   .modal-backdrop {
@@ -1340,6 +1448,11 @@ h2.section__title span {
 }
 
 @media (max-width: 1399.98px) {
+  .about-hero__list li:before,
+  .hero-advantages__title:before {
+    top: 0.2rem;
+  }
+
   .section--bottom {
     margin-bottom: 13rem;
   }
@@ -1452,6 +1565,11 @@ h2.section__title span {
 }
 
 @media (max-width: 991.98px) {
+  .product-slider {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .about-section h2.h1 {
     font-size: 2.6rem;
   }
@@ -1520,6 +1638,10 @@ h2.section__title span {
   .hero-product .hero-advantages__title {
     font-size: 20px;
     line-height: 1.1;
+  }
+
+  .hero-product .hero-advantages__title:before {
+    top: 0;
   }
 
   .hero-form {
@@ -2152,8 +2274,32 @@ h2.section__title span {
 }
 
 @media (max-width: 575.98px) {
+  .hero-advantages__title {
+    padding-left: 3rem;
+  }
+
+  .about-hero__list li:before,
+  .hero-advantages__title:before {
+    top: 0;
+  }
+
+  .about-hero__list li:before,
+  .hero-advantages__title:before {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .product-tabs__button {
+    height: 100%;
+    padding: 1rem;
+  }
+
   .about-section h2.h1 {
     font-size: 2rem;
+  }
+
+  .about-hero .hero-img {
+    height: 100%;
   }
 
   .modal .modal-dialog {
@@ -2290,6 +2436,12 @@ h2.section__title span {
   .payments .button--primary {
     width: 100%;
     margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480.98px) {
+  .product-tabs.delivery-nav-pills button {
+    font-size: 1.6rem;
   }
 }
 

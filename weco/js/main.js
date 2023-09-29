@@ -274,3 +274,6 @@ if (lazyVid) {
     })
 })
 }
+/* document.querySelector("select").addEventListener("change", ()=> {
+  document.querySelector("select").querySelector("option:first-child").style.display = "none"
+}) */
