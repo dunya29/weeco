@@ -277,3 +277,23 @@ if (lazyVid) {
 /* document.querySelector("select").addEventListener("change", ()=> {
   document.querySelector("select").querySelector("option:first-child").style.display = "none"
 }) */
+const stepper = document.querySelectorAll(".stepper")
+if (stepper) {
+  stepper.forEach(item => {
+    let inp = item.querySelector("input[type=number]")
+    function checkMinValue() {
+      if (inp.value <= +inp.step.trim()) {
+        item.querySelector(".form__number-button-left").style.pointerEvents = "none"
+        inp.value = +inp.step.trim()
+      } else {
+        item.querySelector(".form__number-button-left").style.pointerEvents = ""
+      }
+    }
+    if (inp.value == +inp.step.trim()) {
+      item.querySelector(".form__number-button-left").style.pointerEvents = "none"
+    }
+    inp.addEventListener("change", checkMinValue)
+    item.querySelector(".form__number-button-right").addEventListener("click", checkMinValue)
+    item.querySelector(".form__number-button-left").addEventListener("click", checkMinValue)
+  })
+}

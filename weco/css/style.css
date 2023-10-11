@@ -351,7 +351,8 @@ ul.page-list li:before {
 .form input,
 .form textarea,
 .form input::placeholder,
-.form textarea::placeholder {
+.form textarea::placeholder,
+.form select {
   font-size: 1.8rem;
   font-weight: 500;
 }
@@ -382,7 +383,8 @@ ul.page-list li:before {
 }
 
 .form input,
-.form textarea {
+.form textarea,
+.form select {
   color: #2F3339;
   border-radius: 8px;
 }
@@ -1417,26 +1419,32 @@ h2.section__title span {
   -ms-transform: scale(1);
   transform: scale(1);
 }
-.main-map__content .button--primary {
-  color: #2f3339;
-  background: #fff;
-}
+
 #modalPickup select {
-  word-wrap: normal;
-  font-size: 1.4rem;
-  font-weight: 600;
+  min-height: 5.5rem;
   display: inline-block;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 0px;
-  text-transform: initial;
-  color: #40454c;
-  outline: none;
-  margin-bottom: 2rem;
+  padding: 0.5rem 1.5rem;
 }
 
-#modalPickup select option {
-  text-wrap: wrap;
+.product-slider__nav .swiper-slide {
+  position: relative;
+}
+
+.product-slider__nav .swiper-slide:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(33.33%, rgba(51, 51, 51, 0)), color-stop(78.65%, #85B73F));
+  background: -o-linear-gradient(top, rgba(51, 51, 51, 0) 33.33%, #85B73F 78.65%);
+  background: linear-gradient(180deg, rgba(51, 51, 51, 0) 33.33%, #85B73F 78.65%);
+  opacity: 0;
+}
+
+.product-slider__nav .swiper-slide-active:after {
+  opacity: 0.3;
 }
 
 @media only screen and (min-width: 991px) {
@@ -1601,7 +1609,8 @@ h2.section__title span {
   .form input,
   .form textarea,
   .form input::placeholder,
-  .form textarea::placeholder {
+  .form textarea::placeholder,
+  .form select {
     font-size: 1.6rem;
   }
 
@@ -1970,6 +1979,10 @@ h2.section__title span {
 
   .payments__logo {
     padding: 2rem;
+  }
+
+  #modalPickup select {
+    min-height: 5rem;
   }
 }
 
