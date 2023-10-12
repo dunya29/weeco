@@ -2370,6 +2370,12 @@ h2.section__title span {
     padding: 1rem;
   }
 
+  .hero__title,
+  .hero-advantages__title,
+  .about-hero__list li {
+    text-shadow: 1px 1px 1px #000;
+  }
+
   .hero-promo {
     padding: 17px 0;
     bottom: 1%;
