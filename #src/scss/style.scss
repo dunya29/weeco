@@ -1869,3 +1869,79 @@ h2.section__title span {
 .product-slider__nav .swiper-slide-active:after {
     opacity: 0.3;
 }
+.hero {
+    overflow: hidden;
+}
+.hero-promo {
+    padding: 24px 0;
+    position: absolute;
+    bottom: 8%;
+    left: -100px;
+    right: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform: rotate(-11deg);
+    @media (max-width: 991.98px) {
+        padding: 20px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 17px 0;
+        bottom: 1%;
+    }
+    @media (max-width: 767.98px) and (max-height: 767.98px) {
+        bottom: 15%;
+    }
+    &:before, &:after {
+        content: "";
+        display: block;
+        height: 11px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background: url(../img/promo.svg) top left repeat-x;
+        z-index: 2;
+        transform-style: preserve-3d;
+        transform: translate3d(0,0,0);
+    }
+    &:before {
+        top: -1px;
+    }
+    &:after {
+        bottom: -1px;
+    }
+    &__content {
+        margin: 0 30px;
+    }
+    &__title {
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+        white-space: nowrap;
+        @media (max-width:1399.98px) {
+            font-size: 4rem;
+        }
+        @media (max-width: 991.98px) {
+            font-size: 3.6rem;
+        }
+        @media (max-width: 767.98px) {
+            font-size: 2.4rem;
+        }
+    }
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.1;
+        white-space: nowrap;
+        @media (max-width: 1399.98px) {
+            font-size: 1.8rem;
+            margin-top: 5px;
+        }
+        @media (max-width: 767.98px) {
+            font-size: 1.4rem;
+            margin-top: 10px;
+        }
+    }
+}
