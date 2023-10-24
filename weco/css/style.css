@@ -2782,7 +2782,7 @@ h2.section__title span {
     font-size: 12px;
   }
 
-  .cart__item .form-toggle input {
+  .cart__item .form-toggle label {
     font-size: 1.2rem;
   }
 
