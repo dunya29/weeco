@@ -23,8 +23,8 @@
 	<link rel="stylesheet" href="files/libs/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="files/libs/fancyapps/fancybox.css">
 	<link rel="stylesheet" href="css/simplebar.min.css">
-	<link rel="stylesheet" href="files/css/main.css?v=11082023121907">
-	<link rel="stylesheet" href="files/css/media.css?v=11082023121907">
+	<link rel="stylesheet" href="files/css/main.css">
+	<link rel="stylesheet" href="files/css/media.css">
 
 	<link rel="stylesheet" href="css/style.min.css">
 	<meta name="robots" content="noindex, nofollow">
@@ -41,687 +41,737 @@
 		title="Ваш браузер не поддерживает SVG"></object>
 	<div class="page">
 		<div class="page__wrapper">
+			<!--header-->
+			<header class="header sticky-top header--main">
+				<div class="container">
+					<div class="row align-items-center header-g">
+						<div class="col-md-auto col-sm-auto col-auto d-block d-lg-none">
+							<button class="hamburger" id="nav-toggle" type="button" aria-label="Навигационное меню">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+						<div class="col-lg-auto col-md col-sm col-auto">
+							<a class="header-logo" href="/" title="WEECO">
+								<svg width="164" height="30" viewBox="0 0 164 30" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_2_1267)">
+										<path class="logo-green"
+											d="M96.1074 29.9519L96.1216 0.118896L116.069 0.127387L116.066 3.83493L114.572 7.62739L105.407 7.62456V10.95L114.572 10.9529L114.569 18.4104L105.405 18.4076L105.402 22.5L116.057 22.5057L116.055 29.9632L96.1074 29.9519Z"
+											fill="white"></path>
+										<path class="logo-green"
+											d="M138.568 0.135787L138.565 3.84333L137.113 7.63579L127.949 7.63296L127.943 22.5084L138.557 22.5141L138.554 29.9716L122.359 29.966C120.143 29.966 118.609 28.4292 118.609 26.2556L118.618 3.83767C118.618 1.66409 120.155 0.130127 122.371 0.130127L138.568 0.135787Z"
+											fill="white"></path>
+										<path class="logo-green"
+											d="M144.863 29.9718C142.647 29.9718 141.113 28.435 141.113 26.2615L141.122 3.84353C141.122 1.66995 142.659 0.135986 144.875 0.135986L159.75 0.141647C161.966 0.141647 163.5 1.67844 163.5 3.85202L163.492 26.2699C163.492 28.4435 161.955 29.9775 159.739 29.9775L144.863 29.9718ZM150.456 7.64165L150.45 22.5171L154.158 22.5199L154.163 7.64448L150.456 7.64165Z"
+											fill="white"></path>
+										<path class="logo-dark"
+											d="M58.0621 0.164062L60.3602 14.5131H61.1272V0.164062H70.1951V3.86878L67.1725 29.9688H56.7404L54.4848 18.2603H53.8451L51.5895 29.9688H41.1999L38.1348 3.86878V0.164062H47.2451V14.5131H47.9697L50.2678 0.164062H58.0621Z"
+											fill="white"></path>
+										<path class="logo-dark"
+											d="M72.75 29.9659V0.164062H92.6745V3.86878L91.1859 7.6584H82.033V10.9782H91.1859V18.4301H82.033V22.5169H92.6774V29.9688H72.75V29.9659Z"
+											fill="white"></path>
+										<path class="logo-green"
+											d="M0 29.9717V14.5273C5.0717 19.6839 10.1462 24.8434 15.2208 30C10.1462 29.9915 5.0717 29.983 0 29.9717Z"
+											fill="white"></path>
+										<path class="logo-green"
+											d="M29.6797 0.0934874V15.5378C24.6052 10.3812 19.5335 5.22462 14.459 0.0651855C19.5335 0.0765063 24.6052 0.0849969 29.6797 0.0934874Z"
+											fill="white"></path>
+										<path class="logo-green"
+											d="M0.240234 8.76226L20.9317 29.6943C21.7157 29.7509 22.3893 29.6689 22.9553 29.5358C27.5657 28.4321 29.3459 22.5708 29.561 21.8264C22.3978 14.55 15.2317 7.27358 8.06854 0C7.59023 0.0933962 6.86571 0.274528 6.04495 0.639623C5.56382 0.851887 2.24118 2.38868 0.826084 6.12453C0.605329 6.70755 0.3308 7.60472 0.240234 8.76226Z"
+											fill="white"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_2_1267">
+											<rect width="163.497" height="30" fill="white"></rect>
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+						</div>
+						<div class="col-lg d-none d-lg-block">
+							<ul class="header-menu">
+								<li class="header-menu__item"><a class="header-menu__link"
+										href="plitka-dlya-stupeney-weeco">Плитка для ступеней</a></li>
+								<li class="header-menu__item"><a class="header-menu__link" 3=""
+										href="javascript:void(0);">Каталог <svg width="20" height="15"
+											viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M20 13C16.0392 10.3595 12.6405 6.96078 10 3C7.35948 6.96078 3.96078 10.3595 0 13"
+												stroke-width="3"></path>
+										</svg></a>
+									<ul class="header-menu-sub">
+										<li class="header-menu__item"><a class="header-menu-sub__link"
+												href="plitka-dlya-stupeney/">Плитка для ступеней</a></li>
+										<li class="header-menu__item"><a class="header-menu-sub__link"
+												href="taktilnaya-plitka/">Тактильная плитка</a></li>
+										<li class="header-menu__item"><a class="header-menu-sub__link"
+												href="kolpaki/">Колпаки</a></li>
+									</ul>
+								</li>
+								<li class="header-menu__item"><a class="header-menu__link" 39=""
+										href="javascript:void(0);">Компания <svg width="20" height="15"
+											viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M20 13C16.0392 10.3595 12.6405 6.96078 10 3C7.35948 6.96078 3.96078 10.3595 0 13"
+												stroke-width="3"></path>
+										</svg></a>
+									<ul class="header-menu-sub">
+										<li class="header-menu__item"><a class="header-menu-sub__link"
+												href="o-kompanii">О компании</a></li>
+										<li class="header-menu__item"><a class="header-menu-sub__link"
+												href="blog/">Блог</a></li>
+										<li class="header-menu__item"><a class="header-menu-sub__link"
+												href="contacts">Контакты</a></li>
+										<li class="header-menu__item"><a class="header-menu-sub__link"
+												href="kolpaki-na-stolb">О колпаках на столб</a></li>
+										<li class="header-menu__item"><a class="header-menu-sub__link"
+												href="taktilnaya-plitka-weeco">О тактильной плитке</a></li>
+									</ul>
+								</li>
+								<li class="header-menu__item"><a class="header-menu__link" 36=""
+										href="javascript:void(0);">Партнерам <svg width="20" height="15"
+											viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M20 13C16.0392 10.3595 12.6405 6.96078 10 3C7.35948 6.96078 3.96078 10.3595 0 13"
+												stroke-width="3"></path>
+										</svg></a>
+									<ul class="header-menu-sub">
+										<li class="header-menu__item"><a class="header-menu-sub__link"
+												href="optovikam">Оптовым покупателям</a></li>
+										<li class="header-menu__item"><a class="header-menu-sub__link"
+												href="masteram-i-stroitelnym-organizacijam">Мастерам и строительным
+												организациям</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-auto col-md-auto col-sm-auto col">
+							<div class="header-phones">
+								<!--<a href="tel:+74959888033" class="d-block d-md-none"><svg fill="currentColor"><use href="files/images/icons/sprite.svg#phone"></use></svg></a>-->
+								<a href="tel:+74954017255">+7 (495) 401-72-55</a>
+								<a href="tel:+79311061351">+7 (931) 106-13-51</a>
+							</div>
+						</div>
+						<div class="col-lg-auto col-md-auto col-sm-auto d-none d-sm-block">
+							<button type="button" class="header-button" data-bs-toggle="modal"
+								data-bs-target="#modalCallback"><span>Заказать звонок</span></button>
+						</div>
+						<div class="col-lg-auto col-md-auto col-sm-auto col-auto">
+							<a class="header-cart" href="cart">
+								<img src="files/images/icons/cart.svg" alt="Корзина">
+								<span class="ms2_total_count">6</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!--main-->
 			<main class="main">
-				<div class="cart" id="msCart">
+				<nav aria-label="breadcrumb">
 					<div class="container">
-						<div class="row g-md-5 g-3">
-							<div class="col-lg-4 col-md-6 col-sm-12 col-12 order-md-2">
-								<h1 class="h2 product__title">Плитка для лестниц и ступеней WEECO базовая 33х33 см, цвет шоколад</h1>
-								
-											<div class="d-block d-md-none">
-							<div class="swiper product-slider__mobile-for">
-								<div class="swiper-btn swiper-btn--next slider-arrow--right">
-									<svg><use xlink:href="files/images/icons/sprite.svg#btn-next"></use></svg>
-								</div>
-								<div class="swiper-btn swiper-btn--prev slider-arrow--left">
-									<svg><use xlink:href="files/images/icons/sprite.svg#btn-prev"></use></svg>
-								</div>
-								<div class="swiper-wrapper">
-																				<div class="swiper-slide">
-											<a class="product-slider__nav-head product-slider__nav-head-video" href="https://www.youtube.com/watch?v=dAm1n5LnTwg" data-fancybox="gallery2">
-												<img class="img-fluid" src="../assets/cache_image/uploads/bg/IMG_0468_1_1000x667_27b.jpg" alt="...">
-											</a>
-										</div>
-																				<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/img-6641-1.jpg" data-fancybox="gallery2">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/img-6641-1.jpg" alt="...">
-											</a>
-										</div>
-															<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/img-6643.jpg" data-fancybox="gallery2">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/img-6643.jpg" alt="...">
-											</a>
-										</div>
-															<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/florencziya-berlin-bazovaya-shokolad.jpg" data-fancybox="gallery2">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/florencziya-berlin-bazovaya-shokolad.jpg" alt="...">
-											</a>
-										</div>
-															<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/img-6645.jpg" data-fancybox="gallery2">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/img-6645.jpg" alt="...">
-											</a>
-										</div>
-															<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/img-6649.jpg" data-fancybox="gallery2">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/img-6649.jpg" alt="...">
-											</a>
-										</div>
-															<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/img-6651.jpg" data-fancybox="gallery2">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/img-6651.jpg" alt="...">
-											</a>
-										</div>
-															<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/img-6655.jpg" data-fancybox="gallery2">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/img-6655.jpg" alt="...">
-											</a>
-										</div>
-													</div>
-							</div>
-							
-							<div class="swiper product-slider__mobile-nav">
-								<div class="swiper-wrapper">
-									
-																				<div class="swiper-slide">
-											<div class="product-slider__nav-head">
-												<img class="img-fluid" src="../assets/cache_image/uploads/bg/IMG_0468_1_480x320_28a.jpg" alt="...">
-											</div>
-										</div>
-																				<div class="swiper-slide">
-											<div class="product-slider__nav-head">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/normal/img-6641-1.jpg" alt="...">
-											</div>
-										</div>
-															<div class="swiper-slide">
-											<div class="product-slider__nav-head">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/normal/img-6643.jpg" alt="...">
-											</div>
-										</div>
-															<div class="swiper-slide">
-											<div class="product-slider__nav-head">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/normal/florencziya-berlin-bazovaya-shokolad.jpg" alt="...">
-											</div>
-										</div>
-															<div class="swiper-slide">
-											<div class="product-slider__nav-head">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/normal/img-6645.jpg" alt="...">
-											</div>
-										</div>
-															<div class="swiper-slide">
-											<div class="product-slider__nav-head">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/normal/img-6649.jpg" alt="...">
-											</div>
-										</div>
-															<div class="swiper-slide">
-											<div class="product-slider__nav-head">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/normal/img-6651.jpg" alt="...">
-											</div>
-										</div>
-															<div class="swiper-slide">
-											<div class="product-slider__nav-head">
-												<img class="img-fluid lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/normal/img-6655.jpg" alt="...">
-											</div>
-										</div>
-													</div>
-							</div>
-						</div>
-					
-								
-								
-								<div class="row row align-items-center product-units-row">
-									<div class="col">
-										<div class="price-product">
-																		<span class="price">290 ₽<span class="units">/шт.</span></span>
-										</div>
-										<div class="price-modification">
-											
-											<span class="price">1 740 ₽<span class="units">/уп.</span></span>							
-										</div>
-									</div>
-									<div class="col-auto">
-										 
-											<div class="form-toggle" id="nav-radio">
-										 <div class="form-toggle__item form-toggle__item--0">
-								<input id="fid-0" type="radio" value="шт" name="options[packages]" checked="checked">
-								<label for="fid-0">шт</label>
-							</div>
-									 <div class="form-toggle__item form-toggle__item--1">
-								<input id="fid-1" type="radio" value="уп" name="options[packages]">
-								<label for="fid-1">уп</label>
-							</div>
-							</div>                            <div class="product-units">6 шт. = 1 уп.</div>											</div>
-								</div>
-								
-								
-													<div class="product-numbers">
-					<button class="product-numbers__button product-numbers__button--left" id="decrease-button" type="button">-</button>
-					<input type="number" id="amount-input" value="1" name="count">
-					<span id="choice-unit">шт</span>
-					<button class="product-numbers__button product-numbers__button--right" id="increase-button" type="button">+</button>
-					
-				</div>
-				
-				<script>
-					window.addEventListener("load", setDefaultValue);
-				
-					const amountInput = document.getElementById("amount-input");
-					const choiceInput = document.getElementsByName("options[packages]");
-					const increaseButton = document.getElementById("increase-button");
-					const decreaseButton = document.getElementById("decrease-button");
-					const choiceUnit = document.getElementById("choice-unit");
-					
-					amountInput.value = 6;
-					
-					choiceInput.forEach((input) => {
-					  input.addEventListener("change", updateValue);
-					});
-					
-					increaseButton.addEventListener("click", increaseValue);
-					decreaseButton.addEventListener("click", decreaseValue);
-					
-					amountInput.addEventListener("blur", roundValueToMultipleOfFour);
-					amountInput.addEventListener("input", validateInput);
-					
-					function setDefaultValue() {
-					  amountInput.value = 1;
-					  updateValue();
-					}
-					
-					function updateValue() {
-					  const value = amountInput.value;
-					  const choice = document.querySelector('.form-toggle__item input:checked').value;
-					
-					  if (choice === "шт") {
-						amountInput.value = value * 6;
-						choiceUnit.textContent = choice;
-					  } else {
-						amountInput.value = Math.ceil(value / 6);
-						choiceUnit.textContent = choice;
-					  }
-					}
-					
-					function increaseValue() {
-					  const choice = document.querySelector('.form-toggle__item input:checked').value;
-					  if (choice === "шт") {
-						amountInput.stepUp(6);
-					  } else {
-						amountInput.stepUp();
-					  }
-					}
-					
-					function decreaseValue() {
-					  const choice = document.querySelector('.form-toggle__item input:checked').value;
-					  if (
-						(amountInput.value > 6 && choice === "шт") ||
-						(amountInput.value > 1 && choice === "уп")
-					  ) {
-						if (choice === "шт") {
-						  amountInput.stepDown(6);
-						} else {
-						  amountInput.stepDown();
-						}
-					  }
-					}
-					
-					function roundValueToMultipleOfFour() {
-					  const choice = document.querySelector('.form-toggle__item input:checked').value;
-					  if (choice === "шт") {
-						const value = parseInt(amountInput.value);
-						if (!isNaN(value)) {
-						  amountInput.value = Math.ceil(value / 6) * 6;
-						}
-					  }
-					}
-					
-					function validateInput() {
-					  const value = amountInput.value.trim();
-					  if (value.length === 0) {
-						amountInput.value = 1;
-					  } else {
-						const number = parseFloat(value);
-						if (isNaN(number) || number <= 0) {
-						  amountInput.value = 1;
-						} else {
-						  amountInput.value = number;
-						}
-					  }
-					}
-				
-				</script>                                
-								<button type="submit" class="button button--fluid button--primary button--product button--uvd" name="ms2_action" value="cart/add" data-pname="Плитка для лестниц и ступеней WEECO базовая 33х33 см, цвет шоколад" data-pimg="/uploads/products/20/small/img-6641-1.jpg" data-pprice="290">Добавить в корзину</button>
-								
-								<div class="product-colors">
-					<div class="product-colors__title">
-						Цвет: 
+						<ol class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+							<li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a
+									rel="nofollow" title="Главная" itemprop="item" href="/"><span
+										itemprop="name">Главная</span>
+									<meta itemprop="position" content="1">
+								</a></li>
+							<li class="active"><svg fill="currentColor">
+									<use href="files/images/icons/sprite.svg#chevron-right"></use>
+								</svg></li>
+							<li class="active" itemscope="" itemprop="itemListElement"
+								itemtype="http://schema.org/ListItem"><a title="Корзина" itemprop="item"
+									href="cart"><span itemprop="name">Корзина </span>
+									<meta itemprop="position" content="2">
+								</a></li>
+						</ol>
 					</div>
-					<ul class="product-colors__list">
-							
-																				<li class="product-colors__item active">
-										<a data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Шоколад">
-											<span style="background-color: #3C2E26"></span>
-										</a>
-									</li>
-																																																
-				
-															<li class="product-colors__item">
-								<a href="plitka-dlya-lestnits-i-stupeney-weeco-bazovaya-33h33-sm-tsvet-mokryy-asfalt-pbs6.html" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Мокрый асфальт">
-									<span style="background-color: #2f2d2e"></span>
-								</a>
-							</li>
-																			
-																<li class="product-colors__item">
-								<a href="plitka-dlya-lestnits-i-stupeney-weeco-bazovaya-33h33-sm-tsvet-terrakot-pbs6.html" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Терракот">
-									<span style="background-color: #8b3b2a"></span>
-								</a>
-							</li>
-																
-						
-					</ul>
-				</div>				
-								
-								<div class="product-info">
-									<ul class="product-info__list">
-																							<li class="product-info__item">
-												<span class="product-info__icon">
-													<img src="../uploads/product-info/coh17u.svg">
-												</span>
-												<span class="product-info__text">В наличии на складе</span>
-																					<button type="button" class="product-info__help" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Здесь нужно заполнить данные, текст никто не давал">
-														<svg fill="currentColor"><use href="../files/images/icons/sprite.svg#help"></use></svg>
-													</button>
-																			</li>
-																	<li class="product-info__item">
-												<span class="product-info__icon">
-													<img src="../uploads/product-info/4z7bqt.svg">
-												</span>
-												<span class="product-info__text">Доставка, отгрузка: 1-5 дней</span>
-																					<button type="button" class="product-info__help" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Тут можно вывести небольшое описание доставки">
-														<svg fill="currentColor"><use href="../files/images/icons/sprite.svg#help"></use></svg>
-													</button>
-																			</li>
-																	<li class="product-info__item">
-												<span class="product-info__icon">
-													<img src="../uploads/product-info/wmchp7.svg">
-												</span>
-												<span class="product-info__text"><u>Пункты выдачи:</u> завтра, бесплатно</span>
-																					<button type="button" class="product-info__help" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Здесь нужно заполнить данные, текст никто не давал">
-														<svg fill="currentColor"><use href="../files/images/icons/sprite.svg#help"></use></svg>
-													</button>
-																			</li>
-															</ul>
-								</div>
-					
-								<div class="product-options">
-									<ul class="product-options__list">
-																	<li class="product-options__item">
-												<span class="product-options__title"><span>Артикул</span></span>
-												<span class="product-options__value">ПБШ6</span>
-											</li>
-																	<li class="product-options__item">
-						<span class="product-options__title"><span>Коллекция</span></span>
-						<span class="product-options__value">Базовая </span>
-					</li>
-					<li class="product-options__item">
-						<span class="product-options__title"><span>Страна производства</span></span>
-						<span class="product-options__value">Россия </span>
-					</li>
-					<li class="product-options__item">
-						<span class="product-options__title"><span>Гарантия</span></span>
-						<span class="product-options__value">5 лет </span>
-					</li>
-					<li class="product-options__item">
-						<span class="product-options__title"><span>Цвет</span></span>
-						<span class="product-options__value">Шоколад </span>
-					</li>
-					<li class="product-options__item">
-						<span class="product-options__title"><span>Размер (Д/Ш/В)</span></span>
-						<span class="product-options__value">330/330/23 мм</span>
-					</li>
-					<li class="product-options__item">
-						<span class="product-options__title"><span>Толщина</span></span>
-						<span class="product-options__value">23 мм</span>
-					</li>
-					<li class="product-options__item">
-						<span class="product-options__title"><span>Тип изделия</span></span>
-						<span class="product-options__value">Плитка для ступеней базовая </span>
-					</li>
-					<li class="product-options__item">
-						<span class="product-options__title"><span>Назначение</span></span>
-						<span class="product-options__value">на крыльцо, на ступень </span>
-					</li>
-					<li class="product-options__item">
-						<span class="product-options__title"><span>Покрытие</span></span>
-						<span class="product-options__value">Противоскользящее </span>
-					</li>
-					<li class="product-options__item">
-						<span class="product-options__title"><span>Износостойкость</span></span>
-						<span class="product-options__value">Интенсивная проходимость (стандарт PEI 5 из 5) </span>
-					</li>
-					<li class="product-options__item">
-						<span class="product-options__title"><span>Материал</span></span>
-						<span class="product-options__value">Полимер-песчаный композит </span>
-					</li>
-					<li class="product-options__item">
-						<span class="product-options__title"><span>Тип монтажа</span></span>
-						<span class="product-options__value">на саморезы, на плиточный клей </span>
-					</li>
-											<li class="product-options__item">
-						<span class="product-options__title"><span>Кол-во в уп.</span></span>
-						<span class="product-options__value">6 шт</span>
-					</li>
-											<li class="product-options__item">
-						<span class="product-options__title"><span>Вес упаковки</span></span>
-						<span class="product-options__value">19 кг</span>
-					</li>
-										
-									</ul>
-								</div>
-								<div class="product-all">
-									<img src="../files/images/logo-dark.svg">
-									<a href="../plitka-dlya-stupeney/index.htm">Все товары</a>
-								</div>
-				
-								
-							</div>
-							<div class="col-lg-8 col-md-6 order-md-1">
-								<div class="product-main-content">
-									<div class="d-none d-md-block">
-													<div class="product-slider-main">
-							<div class="product-slider-main__left">
-								<div class="swiper-btn swiper-btn--prev slider-arrow--top">
-									<svg><use xlink:href="files/images/icons/sprite.svg#btn-prev"></use></svg>
-								</div>
-								<div class="swiper-btn swiper-btn--next slider-arrow--bottom">
-									<svg><use xlink:href="files/images/icons/sprite.svg#btn-next"></use></svg>
-								</div>
-					
-								<div class="swiper product-slider__nav">
-									
-									<div class="swiper-wrapper">
-																							<div class="swiper-slide">
-												<div class="product-slider__nav-head">
-													<img class="img-fluid" src="../assets/cache_image/uploads/bg/IMG_0468_1_100x67_544.jpg" alt="...">
-												</div>
+				</nav>
+				<div class="container" id="msOrder">
+					<h1 class="h1 pagetitle">Корзина</h1>
+					<form class="js-form-address form ms2_form" method="post">
+						<div class="row g-5 js-form-address__row">
+							<div class="col-lg-8">
+								<div class="form__fieldset" id="msCart">
+									<div class="cart">
+										<div class="cart__header">
+											<div class="row align-items-center">
+												<div class="col-4 col-item">Товар</div>
 											</div>
-																
-										
-																	<div class="swiper-slide">
-												<div class="product-slider__nav-head">
-													<img class="img-fluid" src="../uploads/products/20/small/img-6641-1.jpg" alt="...">
-												</div>
-											</div>
-																	<div class="swiper-slide">
-												<div class="product-slider__nav-head">
-													<img class="img-fluid" src="../uploads/products/20/small/img-6643.jpg" alt="...">
-												</div>
-											</div>
-																	<div class="swiper-slide">
-												<div class="product-slider__nav-head">
-													<img class="img-fluid" src="../uploads/products/20/small/florencziya-berlin-bazovaya-shokolad.jpg" alt="...">
-												</div>
-											</div>
-																	<div class="swiper-slide">
-												<div class="product-slider__nav-head">
-													<img class="img-fluid" src="../uploads/products/20/small/img-6645.jpg" alt="...">
-												</div>
-											</div>
-																	<div class="swiper-slide">
-												<div class="product-slider__nav-head">
-													<img class="img-fluid" src="../uploads/products/20/small/img-6649.jpg" alt="...">
-												</div>
-											</div>
-																	<div class="swiper-slide">
-												<div class="product-slider__nav-head">
-													<img class="img-fluid" src="../uploads/products/20/small/img-6651.jpg" alt="...">
-												</div>
-											</div>
-																	<div class="swiper-slide">
-												<div class="product-slider__nav-head">
-													<img class="img-fluid" src="../uploads/products/20/small/img-6655.jpg" alt="...">
-												</div>
-											</div>
+										</div>
+										<div class="cart__body">
+											<div class="cart__item">
+												<div class="row">
+													<div class="col-12 col-md-12 col-lg-6 col-item">
+														<div class="cart__item-head">
+															<a class="cart__item-image"
+																href="product/stupen-frontalnaya-dlya-lestnits-weeco-florentsiya-36h33-sm-tsvet-terrakot-ffsh6">
+																<img class="img-fluid"
+																	src="/uploads/products/26/small/florencziya-frontalnaya-terrakot.jpg"
+																	data-src="/uploads/products/26/small/florencziya-frontalnaya-terrakot.jpg"
+																	alt="Ступень фронтальная для лестниц WEECO Флоренция 36х33 см, цвет терракот"
+																	title="Ступень фронтальная для лестниц WEECO Флоренция 36х33 см, цвет терракот">
+															</a>
+															<div class="cart__item-heading">
+																<a class="cart__item-title"
+																	href="product/stupen-frontalnaya-dlya-lestnits-weeco-florentsiya-36h33-sm-tsvet-terrakot-ffsh6">Ступень
+																	фронтальная для лестниц WEECO Флоренция 36х33 см,
+																	цвет
+																	терракот
+																</a>
 															</div>
-								</div>
-							</div>
-							<div class="swiper product-slider__for">
-								<div class="swiper-btn swiper-btn--next slider-arrow--right">
-									<svg><use xlink:href="files/images/icons/sprite.svg#btn-next"></use></svg>
-								</div>
-								<div class="swiper-btn swiper-btn--prev slider-arrow--left">
-									<svg><use xlink:href="files/images/icons/sprite.svg#btn-prev"></use></svg>
-								</div>
-								<div class="swiper-wrapper">
-																				<div class="swiper-slide">
-											<a class="product-slider__nav-head product-slider__nav-head-video" href="https://www.youtube.com/watch?v=dAm1n5LnTwg" data-fancybox="gallery">
-												<img class="img-fluid" src="../assets/cache_image/uploads/bg/IMG_0468_1_1000x667_27b.jpg" alt="...">
-											</a>
-										</div>
-														
-															<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/img-6641-1.jpg" data-fancybox="gallery">
-												<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/img-6641-1.jpg" alt="...">
-											</a>
-										</div>
-															<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/img-6643.jpg" data-fancybox="gallery">
-												<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/img-6643.jpg" alt="...">
-											</a>
-										</div>
-															<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/florencziya-berlin-bazovaya-shokolad.jpg" data-fancybox="gallery">
-												<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/florencziya-berlin-bazovaya-shokolad.jpg" alt="...">
-											</a>
-										</div>
-															<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/img-6645.jpg" data-fancybox="gallery">
-												<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/img-6645.jpg" alt="...">
-											</a>
-										</div>
-															<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/img-6649.jpg" data-fancybox="gallery">
-												<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/img-6649.jpg" alt="...">
-											</a>
-										</div>
-															<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/img-6651.jpg" data-fancybox="gallery">
-												<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/img-6651.jpg" alt="...">
-											</a>
-										</div>
-															<div class="swiper-slide">
-											<a class="product-slider__nav-head" href="../uploads/products/20/img-6655.jpg" data-fancybox="gallery">
-												<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/uploads/products/20/big/img-6655.jpg" alt="...">
-											</a>
-										</div>
+														</div>
 													</div>
-							</div>
-						
-						</div>
-						
+													<div class="col-12 col-md-3 col-lg-3 col-item text-center">
+														
+														 <div class="stepper form__number">
+															<button class="form__number-button-left" type="button"
+																spinner-button="down"
+																style="pointer-events: none;">−</button>
+															<input type="number" name="count" value="6" min="0"
+																max="100" step="6" class="stepper__input">
+															<button class="form__number-button-right" type="button"
+																spinner-button="up">+</button>
+														</div> 
+														<div class="form-toggle">
+															<div class="form-toggle__item">
+																<input id="fid-0" type="radio" value="шт"
+																	name="packages" checked="checked">
+																<label for="fid-0">шт</label>
+															</div>
+															<div class="form-toggle__item">
+																<input id="fid-1" type="radio" value="уп"
+																	name="packages">
+																<label for="fid-1">уп</label>
+															</div>
+														</div>
+														<div class="d-flex d-price">
+															<span class="ms-price">
+																<span class="mr-2 text-nowrap">617 ₽ </span>
+															</span>
+															<small>/шт</small>
+														</div>
+													</div>
+													<div class="col-12 col-md-4 col-lg-3 col-item text-end">
+														<span class="d-discount">-547 ₽</span>
+														<del class="old_price">3702 ₽</del>
+														<div class="ms-cost"><span class="ms2_cost">3 702</span> ₽</div>
+														<a href="#" class="cart-remove" data-bs-toggle="tooltip"
+															data-bs-placement="top" data-bs-title="Удалить товар">
+															<svg fill="currentColor">
+																<use href="files/images/icons/sprite.svg#trash"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-									
-									<ul class="nav product-tabs" id="pills-tab" role="tablist">
-										<li class="product-tabs__item" role="presentation">
-											<button class="product-tabs__button active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Описание</button>
+								</div>
+								<div class="form__fieldset">
+									<h4 class="form__title">Данные получателя:</h4>
+
+									<div class="form__group">
+										<input type="text" id="receiver" placeholder="Получатель" name="receiver"
+											value="" class="form__input required">
+									</div>
+
+
+									<div class="row row-cols-sm-2 row-cols-1 g-0 g-lg-5 g-sm-3">
+										<div class="col">
+											<div class="form__group">
+												<input type="text" id="email" placeholder="Email" name="email" value=""
+													class="form__input required">
+											</div>
+										</div>
+										<div class="col">
+											<div class="form__group">
+												<input type="text" id="phone" placeholder="Телефон" name="phone"
+													value="" class="form__input phonemask required">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form__fieldset" id="deliveries">
+									<h4 class="form__title">Варианты доставки:</h4>
+									<label for="delivery_1" class="checkbox">
+										<input type="radio" name="delivery" value="1" id="delivery_1"
+											data-payments="[1,2,3,4,5]" checked=""><i></i>Самовывоз </label>
+									<label for="delivery_2" class="checkbox">
+										<input type="radio" name="delivery" value="2" id="delivery_2"
+											data-payments="[1,2,3,4,5]"><i></i>Доставка (рассчитывается менеджером
+										индивидуально) </label>
+								</div>
+								<div class="form__fieldset">
+									<h4 class="form__title">Адрес доставки:</h4>
+
+									<div class="form__group">
+										<input type="text" id="city" placeholder="Город" name="city" value=""
+											class="form__input required" autocomplete="off" data-kladr-type="city">
+									</div>
+
+
+									<div class="form__group">
+										<input type="text" id="street" placeholder="Улица" name="street" value=""
+											class="form__input required" autocomplete="off" data-kladr-type="street">
+									</div>
+
+									<div class="row g-0 g-lg-5 g-sm-3">
+
+										<div class="col-lg-3 col-md-3 col-sm-3 col-12">
+											<div class="form__group">
+												<input type="text" id="building" placeholder="Дом" name="building"
+													value="" class="form__input required" autocomplete="off"
+													data-kladr-type="building">
+											</div>
+										</div>
+										<div class="col-lg-3 col-md-3 col-sm-3 col-12">
+											<div class="form__group">
+												<input type="text" id="floor" placeholder="Этаж" name="floor" value=""
+													class="form__input">
+											</div>
+										</div>
+										<div class="col-lg-3 col-md-3 col-sm-3 col-12">
+											<div class="form__group">
+												<input type="text" id="room" placeholder="Кв." name="room" value=""
+													class="form__input">
+											</div>
+										</div>
+
+									</div>
+
+									<div class="form__group">
+										<textarea rows="5" name="comment" id="comment" placeholder="Комментарий"
+											class="form__textarea"></textarea>
+									</div>
+								</div>
+								<div class="form__fieldset" id="payments">
+									<h4 class="form__title">Способы оплаты:</h4>
+									<label for="payment_1" class="checkbox">
+										<input type="radio" name="payment" value="1" id="payment_1"
+											checked=""><i></i>Оплата наличными </label>
+									<label for="payment_2" class="checkbox">
+										<input type="radio" name="payment" value="2" id="payment_2"><i></i>Оплата по
+										карте </label>
+									<label for="payment_3" class="checkbox">
+										<input type="radio" name="payment" value="3" id="payment_3"><i></i>Оплата по
+										счету </label>
+									<label for="payment_4" class="checkbox">
+										<input type="radio" name="payment" value="4" id="payment_4"><i></i>Оплата по
+										QR коду </label>
+									<label for="payment_5" class="checkbox">
+										<input type="radio" name="payment" value="5" id="payment_5"><i></i>Оплата
+										наложенным платежом </label>
+								</div>
+							</div>
+							<div class="col-lg-4 js-form-address__actions">
+								<div class="total-block">
+									<div class="promocode">
+										<div class="mspc_form ">
+											<div class="h5 promocode-title">Промо-код</div>
+											<div class="promocode-form">
+												<input type="text" class="mspc_field " value=""
+													placeholder="Укажите промо-код">
+												<button class="mspc_btn"><span
+														class="mobile-hidden">+</span><span>Применить</span></button>
+											</div>
+										</div>
+									</div>
+									<ul class="leaders">
+										<li class="total__block-count">
+											<div><span class="ms2_total_count">6</span> шт.</div>
+											<div><span class="rub" id="ms2_order_full_cost">3 900</span> ₽</div>
 										</li>
-										<li class="product-tabs__item" role="presentation">
-											<button class="product-tabs__button" id="pills-delivery-tab" data-bs-toggle="pill" data-bs-target="#pills-delivery" type="button" role="tab" aria-controls="pills-delivery" aria-selected="false">Доставка</button>
+										<li class="mspc_discount_amount">
+											<div>Скидка<span class="mobile-hidden"> по акции</span></div>
+											<div class="red_price"><span class="rub" id="ms2_order_cart_discount">-
+													198</span></div>
+										</li>
+										<li class="total__block-total">
+											<div class="mobile-hidden">Итого со скидкой</div>
+											<div><span class="rub" id="ms2_order_cost">3 155</span></div>
 										</li>
 									</ul>
-									
-									<div class="tab-content" id="pills-tabContent">
-										<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-																			<div class="h1">Плитка для лестниц и ступеней WEECO базовая</div>
-																		<p>Базовая плитка применяется для облицовки, укладки лестниц, крылец (металлических, бетонных, кирпичных, деревянных) - крепится на любую поверхность.</p>
-				<p>При креплении ступеней на саморезы, работы можно проводить и зимой, при низкой температуре. Ступени крепятся на любую поверхность.Благодаря разработанной рекомендации, смонтировать ступени сможет практически любой человек, даже без навыков работы.&nbsp;</p>
-				<p>Разработанная нашей компанией форма ребер жесткости позволяет надежно закрепить плитку с помощью недорогих клеев на бетонном основании.</p>
-				<p>В составе только пищевые полимеры, песок и красящий пигмент. Санитарно-эпидемиологическое заключение подтверждает безопасность продукции. Ступени на солнце не выцветают.</p>
-				<p>Разрушить ступени практически невозможно. Они не трескаются, не лопаются, не крошатся.</p>
-				<p>Эксплуатационные характеристики превосходят аналоги из других материалов. Они абсолютно нескользкие. По классу сопротивления скольжению ступени относятся к R12.</p>    
-										
-										</div>
-										<div class="tab-pane fade" id="pills-delivery" role="tabpanel" aria-labelledby="pills-delivery-tab" tabindex="0">
-											<h2 class="h1">Доставляем по РФ и СНГ</h2>
-											<p>Осуществляем доставку во все регионы России транспортными компаниями: Деловые Линии, ПЭК, КИТ, Байкал-Сервис, Энергия и др.</p>    
-										</div>
-									</div>
+									<div class="promo-btn">Промокод</div>
+									<button type="submit" name="ms2_action"
+										class="ms2_link button button--fluid button--primary">Оформить</button>
 								</div>
-								
-							</div>
-							
-						</div>
-
-						<h1 class="h1 pagetitle">Корзина</h1>
-						<div class="cart__header">
-							<div class="row align-items-center">
-								<div class="col-4 col-item">Товар</div>
-								<div class="col-3 text-center">Цена</div>
-								<div class="col-2 text-center">Количество</div>
-								<div class="col-2 text-center">Стоимость</div>
-								<div class="col-1 text-center text-lg-center"></div>
 							</div>
 						</div>
-						<div class="cart__body">
-							<div class="cart__item" id="ms2464c122edfc75f8fcaaa551442e4ff1">
-								<div class="row align-items-center">
-									<div class="col-12 col-md-12 col-lg-4 col-item">
-										<div class="cart__item-head">
-											<a class="cart__item-image"
-												href="product/kolpak-na-stolb-weeco-385h385-sm-tsvet-shokolad-kpsh">
-												<img class="img-fluid"
-													src="/uploads/products/33/small/kolpak-shokolad.jpg"
-													data-src="/uploads/products/33/small/kolpak-shokolad.jpg"
-													alt="Колпак на столб WEECO 38,5х38,5 см, цвет шоколад"
-													title="Колпак на столб WEECO 38,5х38,5 см, цвет шоколад">
-											</a>
-											<div class="cart__item-heading">
-												<a class="cart__item-title"
-													href="product/kolpak-na-stolb-weeco-385h385-sm-tsvet-shokolad-kpsh">Колпак
-													на столб WEECO 38,5х38,5 см, цвет шоколад</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-12 col-md-4 col-lg-3 col-item text-lg-center">
-										<div class="d-flex d-price">
-											<small>Цена: </small>
-											<span class="ms-price">
-												<span class="mr-2 text-nowrap">1 400 ₽ </span>
-											</span>
-											<small>
-												/шт
-
-											</small>
-										</div>
-									</div>
-									<div class="col-12 col-md-3 col-lg-2 col-item text-center">
-										<form method="post" class="ms2_form">
-											<input type="hidden" name="key" value="ms2464c122edfc75f8fcaaa551442e4ff1">
-											<div class="stepper js-spinner form__number">
-												<button class="form__number-button-left" type="button"
-													spinner-button="down">−</button>
-												<input type="number" name="count" value="1" min="0" max="100" step="
-																																																																																		1                                                	                                                                                         	
-																																																					
-								
-								" class="stepper__input">
-												<span class="form__number-units">
-													шт
-
-												</span>
-
-												<button class="form__number-button-right" type="button"
-													spinner-button="up">+</button>
-											</div>
-											<button class="d-none" type="submit" name="ms2_action"
-												value="cart/change"></button>
-										</form>
-
-
-									</div>
-									<div class="col-12 col-md-4 col-lg-2 col-item text-center">
-										<span class="ms-cost">
-											<small>Стоимость: </small> <span class="ms2_cost">1 400</span> ₽</span>
-
-									</div>
-									<div class="col-12 col-md-1 col-lg-1 text-center">
-										<form method="post" class="ms2_form text-center">
-											<input type="hidden" name="key" value="ms2464c122edfc75f8fcaaa551442e4ff1">
-											<button class="cart-remove" type="submit" name="ms2_action"
-												value="cart/remove" data-bs-toggle="tooltip" data-bs-placement="top"
-												data-bs-title="Удалить товар">
-												<svg fill="currentColor">
-													<use href="files/images/icons/sprite.svg#trash"></use>
-												</svg>
-											</button>
-										</form>
-									</div>
-								</div>
-							</div>
-							<div class="cart__item" id="msa4b6fe346876b9f9c54e0f38891f4ca2">
-								<div class="row align-items-center">
-									<div class="col-12 col-md-12 col-lg-4 col-item">
-										<div class="cart__item-head">
-											<a class="cart__item-image"
-												href="product/stupen-frontalnaya-dlya-lestnits-weeco-florentsiya-36h33-sm-tsvet-terrakot-ffsh6">
-												<img class="img-fluid"
-													src="/uploads/products/26/small/florencziya-frontalnaya-terrakot.jpg"
-													data-src="/uploads/products/26/small/florencziya-frontalnaya-terrakot.jpg"
-													alt="Ступень фронтальная для лестниц WEECO Флоренция 36х33 см, цвет терракот"
-													title="Ступень фронтальная для лестниц WEECO Флоренция 36х33 см, цвет терракот">
-											</a>
-											<div class="cart__item-heading">
-												<a class="cart__item-title"
-													href="product/stupen-frontalnaya-dlya-lestnits-weeco-florentsiya-36h33-sm-tsvet-terrakot-ffsh6">Ступень
-													фронтальная для лестниц WEECO Флоренция 36х33 см, цвет терракот</a>
-
-
-
-
-
-											</div>
-										</div>
-									</div>
-									<div class="col-12 col-md-4 col-lg-3 col-item text-lg-center">
-										<div class="d-flex d-price">
-											<small>Цена: </small>
-											<span class="ms-price">
-												<span class="mr-2 text-nowrap">650 ₽ </span>
-											</span>
-											<small>
-												/шт
-
-											</small>
-										</div>
-									</div>
-									<div class="col-12 col-md-3 col-lg-2 col-item text-center">
-										<form method="post" class="ms2_form">
-											<input type="hidden" name="key" value="msa4b6fe346876b9f9c54e0f38891f4ca2">
-											<div class="stepper js-spinner form__number">
-												<button class="form__number-button-left" type="button"
-													spinner-button="down">−</button>
-												<input type="number" name="count" value="24" min="0" max="100" step="
-																																																																																		6                                                	                                                                                         	
-																																																					
-								
-								" class="stepper__input">
-												<span class="form__number-units">
-													шт
-
-												</span>
-
-												<button class="form__number-button-right" type="button"
-													spinner-button="up">+</button>
-											</div>
-											<button class="d-none" type="submit" name="ms2_action"
-												value="cart/change"></button>
-										</form>
-
-
-									</div>
-									<div class="col-12 col-md-4 col-lg-2 col-item text-center">
-										<span class="ms-cost">
-											<small>Стоимость: </small> <span class="ms2_cost">15 600</span> ₽</span>
-
-									</div>
-									<div class="col-12 col-md-1 col-lg-1 text-center">
-										<form method="post" class="ms2_form text-center">
-											<input type="hidden" name="key" value="msa4b6fe346876b9f9c54e0f38891f4ca2">
-											<button class="cart-remove" type="submit" name="ms2_action"
-												value="cart/remove" data-bs-toggle="tooltip" data-bs-placement="top"
-												data-bs-title="Удалить товар">
-												<svg fill="currentColor">
-													<use href="files/images/icons/sprite.svg#trash"></use>
-												</svg>
-											</button>
-										</form>
-									</div>
-								</div>
-							</div>
+					</form>
+				</div>
+			</main>
+		</div>
+		<!--footer-->
+		<footer class="footer">
+			<div class="container">
+				<div class="row" itemscope="" itemtype="http://schema.org/LocalBusiness">
+					<div class="col-lg-4 col-md-6 col-sm-4 col-12 order-lg-1">
+						<img class="footer-logo" itemprop="image" src="files/images/logo-white.svg" alt="...">
+						<meta itemprop="name" content="ВиЭко">
+						<div class="footer-copyright">
+							Производство полимерпесчаной плитки оптом и в розницу от завода изготовителя с доставкой по
+							всей России и гарантией 5 лет </div>
+						<div class="footer-address" itemprop="address" itemscope=""
+							itemtype="http://schema.org/PostalAddress">
+							<span itemprop="name">ВиЭко</span>, <span itemprop="postalCode">428903</span>, <span
+								itemprop="addressRegion">Чувашская Республика</span>,<span itemprop="addressLocality">г.
+								Чебоксары</span>, <span itemprop="streetAddress">Вурнарское шоссе д. 17, офис 311</span>
 						</div>
 					</div>
-				</div>
 
-			</main>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-12 order-lg-3">
+						<ul class="nav flex-column footer-nav">
+							<li class="footer-nav__item"><a class="footer-nav__link"
+									href="optovyim-pokupatelyam.html">Оптовым покупателям</a></li>
+							<li class="footer-nav__item"><a class="footer-nav__link" href="o-kompanii.html">О
+									компании</a></li>
+							<li class="footer-nav__item"><a class="footer-nav__link" href="blog.html">Блог</a></li>
+							<li class="footer-nav__item"><a class="footer-nav__link" href="kontaktyi.html">Контакты</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-12 order-lg-4">
+						<ul class="nav flex-column footer-nav">
+							<li class="footer-nav__item"><a class="footer-nav__link"
+									href="plitka-dlya-stupeney.html">Плитка для ступеней</a></li>
+							<li class="footer-nav__item"><a class="footer-nav__link"
+									href="taktilnaya-plitka.html">Тактильная плитка</a></li>
+							<li class="footer-nav__item"><a class="footer-nav__link" href="kolpaki.html">Колпаки</a>
+							</li>
+						</ul>
+						<button type="button" class="button button--primary button--fluid button--small mt-5"
+							data-bs-toggle="modal" data-bs-target="#modalCallback"><span>Заказать звонок</span></button>
+					</div>
+					<div class="col-lg-3 col-md-12 col-sm-12 col-12 order-lg-2 footer-contacts">
+						<ul class="nav footer-social">
+							<li class="footer-social__item">
+								<a class="footer-social__link" href="https://vk.com" target="_blank">
+									<svg fill="currentColor">
+										<use href="files/images/icons/sprite.svg#vk"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="footer-social__item">
+								<a class="footer-social__link" href="https://www.youtube.com/" target="_blank">
+									<svg fill="currentColor">
+										<use href="files/images/icons/sprite.svg#youtube"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="footer-social__item">
+								<a class="footer-social__link" href="https://ya.ru" target="_blank">
+									<svg fill="currentColor">
+										<use href="files/images/icons/sprite.svg#yadzen"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+
+						<div class="footer-phones">
+							<a href="tel:+74952665308"><span itemprop="telephone">+7 (495) 266-53-08</span></a>
+							<br>
+							<a href="tel:+79311061351"><span itemprop="telephone">+7 (931) 106-13-51</span></a>
+						</div>
+						<div class="footer-work">пн-пт: 9:00 - 20:00, <br>сб-вс: 10:00 - 17:00</div>
+						<a class="footer-email" href="mailto:weeco2018@mail.ru" itemprop="email">weeco2018@mail.ru</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!--fixed-btn-->
+	<!-- <a class="fixed-btn" href="https://api.whatsapp.com/send?phone=79279983383" target="_blank">
+		<p>Написать в WhatsApp</p>
+		<svg style="pointer-events:none; display:block; height:50px; width:50px;" width="50px" height="50px"
+			viewBox="0 0 1024 1024">
+			<defs>
+				<path id="htwasqicona-chat"
+					d="M1023.941 765.153c0 5.606-.171 17.766-.508 27.159-.824 22.982-2.646 52.639-5.401 66.151-4.141 20.306-10.392 39.472-18.542 55.425-9.643 18.871-21.943 35.775-36.559 50.364-14.584 14.56-31.472 26.812-50.315 36.416-16.036 8.172-35.322 14.426-55.744 18.549-13.378 2.701-42.812 4.488-65.648 5.3-9.402.336-21.564.505-27.15.505l-504.226-.081c-5.607 0-17.765-.172-27.158-.509-22.983-.824-52.639-2.646-66.152-5.4-20.306-4.142-39.473-10.392-55.425-18.542-18.872-9.644-35.775-21.944-50.364-36.56-14.56-14.584-26.812-31.471-36.415-50.314-8.174-16.037-14.428-35.323-18.551-55.744-2.7-13.378-4.487-42.812-5.3-65.649-.334-9.401-.503-21.563-.503-27.148l.08-504.228c0-5.607.171-17.766.508-27.159.825-22.983 2.646-52.639 5.401-66.151 4.141-20.306 10.391-39.473 18.542-55.426C34.154 93.24 46.455 76.336 61.07 61.747c14.584-14.559 31.472-26.812 50.315-36.416 16.037-8.172 35.324-14.426 55.745-18.549 13.377-2.701 42.812-4.488 65.648-5.3 9.402-.335 21.565-.504 27.149-.504l504.227.081c5.608 0 17.766.171 27.159.508 22.983.825 52.638 2.646 66.152 5.401 20.305 4.141 39.472 10.391 55.425 18.542 18.871 9.643 35.774 21.944 50.363 36.559 14.559 14.584 26.812 31.471 36.415 50.315 8.174 16.037 14.428 35.323 18.551 55.744 2.7 13.378 4.486 42.812 5.3 65.649.335 9.402.504 21.564.504 27.15l-.082 504.226z">
+				</path>
+			</defs>
+			<linearGradient id="htwasqiconb-chat" gradientUnits="userSpaceOnUse" x1="512.001" y1=".978" x2="512.001"
+				y2="1025.023">
+				<stop offset="0" stop-color="#61fd7d"></stop>
+				<stop offset="1" stop-color="#2bb826"></stop>
+			</linearGradient>
+			<use xlink:href="#htwasqicona-chat" overflow="visible" style="fill: url(#htwasqiconb-chat)"
+				fill="url(#htwasqiconb-chat)"></use>
+			<g>
+				<path style="fill: #FFFFFF;" fill="#FFF"
+					d="M783.302 243.246c-69.329-69.387-161.529-107.619-259.763-107.658-202.402 0-367.133 164.668-367.214 367.072-.026 64.699 16.883 127.854 49.017 183.522l-52.096 190.229 194.665-51.047c53.636 29.244 114.022 44.656 175.482 44.682h.151c202.382 0 367.128-164.688 367.21-367.094.039-98.087-38.121-190.319-107.452-259.706zM523.544 808.047h-.125c-54.767-.021-108.483-14.729-155.344-42.529l-11.146-6.612-115.517 30.293 30.834-112.592-7.259-11.544c-30.552-48.579-46.688-104.729-46.664-162.379.066-168.229 136.985-305.096 305.339-305.096 81.521.031 158.154 31.811 215.779 89.482s89.342 134.332 89.312 215.859c-.066 168.243-136.984 305.118-305.209 305.118zm167.415-228.515c-9.177-4.591-54.286-26.782-62.697-29.843-8.41-3.062-14.526-4.592-20.645 4.592-6.115 9.182-23.699 29.843-29.053 35.964-5.352 6.122-10.704 6.888-19.879 2.296-9.176-4.591-38.74-14.277-73.786-45.526-27.275-24.319-45.691-54.359-51.043-63.543-5.352-9.183-.569-14.146 4.024-18.72 4.127-4.109 9.175-10.713 13.763-16.069 4.587-5.355 6.117-9.183 9.175-15.304 3.059-6.122 1.529-11.479-.765-16.07-2.293-4.591-20.644-49.739-28.29-68.104-7.447-17.886-15.013-15.466-20.645-15.747-5.346-.266-11.469-.322-17.585-.322s-16.057 2.295-24.467 11.478-32.113 31.374-32.113 76.521c0 45.147 32.877 88.764 37.465 94.885 4.588 6.122 64.699 98.771 156.741 138.502 21.892 9.45 38.982 15.094 52.308 19.322 21.98 6.979 41.982 5.995 57.793 3.634 17.628-2.633 54.284-22.189 61.932-43.615 7.646-21.427 7.646-39.791 5.352-43.617-2.294-3.826-8.41-6.122-17.585-10.714z">
+				</path>
+			</g>
+		</svg>
+	</a> -->
+	<!--modalPickup-->
+	<div class="modal fade" id="modalPickup" tabindex="-1" aria-labelledby="modalPickup" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="modal-close up" data-bs-dismiss="modal" aria-label="Close">
+						<svg fill="currentColor">
+							<use href="files/images/icons/sprite.svg#x-lg"></use>
+						</svg>
+					</button>
+					<div class="h3 modal-title" id="modalTitle">Оставьте заявку на самовывоз</div>
+					<form action="" method="post" class="form">
+						<div class="form__group">
+							<input type="text" class="form__input" placeholder="*Имя" name="name" value="">
+						</div>
+						<div class="form__group">
+							<input type="text" class="form__input phonemask" placeholder="*Телефон" name="phone"
+								value="">
+						</div>
+						<div class="form-group">
+							<select style="height: 100%;">
+								<option>г. Мытищи, Ярмарочная 5. Навес 4-2 Россия, Московская обл,</option>
+								<option>г. Чебоксары, Вурнарское шоссе д. 17, офис 311</option>
+							</select>
+						</div>
+						<div class="form__group">
+							<button type="submit" class="button button--primary button--fluid">Отправить</button>
+						</div>
+						<p class="personal">Нажимая на кнопку «Отправить», я даю согласие на <a href="policy.html"
+								target="_blank">обработку персональных данных</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--modalCalculate1-->
+	<div class="modal fade" id="modalCalculate1" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="modal-close up" data-bs-dismiss="modal" aria-label="Close">
+						<svg fill="currentColor">
+							<use href="files/images/icons/sprite.svg#x-lg"></use>
+						</svg>
+					</button>
+					<div class="modal-content__header">
+						<div class="h3 modal-title" id="modalTitle">Рассчитайте стоимость ступеней для крыльца</div>
+					</div>
+					<form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+						<div class="form__group">
+							<input type="text" class="form__input" placeholder="Ширина крыльца" name="" value="">
+						</div>
+						<div class="form__group">
+							<input type="text" class="form__input" placeholder="Количество ступеней " name="" value="">
+						</div>
+						<div class="form__group">
+							<input type="text" class="form__input" placeholder="* Имя" name="name" value="">
+						</div>
+						<div class="form__group">
+							<input type="text" class="form__input phonemask" placeholder="* Телефон" name="phone"
+								value="">
+						</div>
+						<div class="form__group file-form file-form--checked">
+							<label>
+								<input type="file">
+								<svg>
+									<use xlink:href="files/images/icons/sprite.svg#file-plus"></use>
+								</svg>
+								<span class="file-form__lbl">Прикрепить документ</span>
+								<span class="file-form__name"></span>
+							</label>
+							<div class="file-form__txt">не более 2Mb</div>
+							<div class="file-form__error">Ошибка: файл должен быть не более 2Mb</div>
+						</div>
+						<p class="personal">Нажимая на кнопку «Отправить», я даю согласие на <a href="policy"
+								target="_blank">обработку персональных данных</a></p>
+						<button type="submit" class="button button--primary button--fluid">Получить расчет</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--modalCalculate2-->
+	<div class="modal fade" id="modalCalculate2" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="modal-close up" data-bs-dismiss="modal" aria-label="Close">
+						<svg fill="currentColor">
+							<use href="files/images/icons/sprite.svg#x-lg"></use>
+						</svg>
+					</button>
+					<div class="modal-content__header">
+						<div class="h3 modal-title" id="modalTitle">Точный расчет ступеней<br>для крыльца </div>
+					</div>
+					<form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+						<div class="form__group">
+							<input type="text" class="form__input" placeholder="Ширина крыльца" name="" value="">
+						</div>
+						<div class="form__group">
+							<input type="text" class="form__input" placeholder="Количество ступеней " name="" value="">
+						</div>
+						<div class="form__group">
+							<input type="text" class="form__input" placeholder="* Имя" name="name" value="">
+						</div>
+						<div class="form__group">
+							<input type="text" class="form__input phonemask" placeholder="* Телефон" name="phone"
+								value="">
+						</div>
+						<div class="form__group file-form file-form--checked">
+							<label>
+								<input type="file">
+								<svg>
+									<use xlink:href="files/images/icons/sprite.svg#file-plus"></use>
+								</svg>
+								<span class="file-form__lbl">Прикрепить документ</span>
+								<span class="file-form__name"></span>
+							</label>
+							<div class="file-form__txt">не более 2Mb</div>
+							<div class="file-form__error">Ошибка: файл должен быть не более 2Mb</div>
+						</div>
+						<p class="personal">Нажимая на кнопку «Отправить», я даю согласие на <a href="policy"
+								target="_blank">обработку персональных данных</a></p>
+						<button type="submit" class="button button--primary button--fluid">Получить расчет</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--modalOrderPlate-->
+	<div class="modal fade" id="modalOrderPlate" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="modal-close up" data-bs-dismiss="modal" aria-label="Close">
+						<svg fill="currentColor">
+							<use href="files/images/icons/sprite.svg#x-lg"></use>
+						</svg>
+					</button>
+					<div class="h3 modal-title" id="modalTitle">Оставьте заявку</div>
+					<form action="" method="post" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+						<input type="hidden" name="collection" value="">
+						<input type="hidden" name="type" value="">
+						<input type="hidden" name="color" value="">
+						<div class="form__group">
+							<input type="text" class="form__input" placeholder="*Имя" name="name" value="">
+						</div>
+						<div class="form__group">
+							<input type="text" class="form__input phonemask" placeholder="*Телефон" name="phone"
+								value="">
+						</div>
+						<div class="form__group">
+							<input type="email" class="form__input" placeholder="Email" name="email" value="">
+						</div>
+						<div class="form__group">
+							<button type="submit" class="button button--primary button--fluid">Отправить</button>
+						</div>
+						<p class="personal">Нажимая на кнопку «Отправить», я даю согласие на <a href="policy.html"
+								target="_blank">обработку персональных данных</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--modalCallback-->
+	<div class="modal fade" id="modalCallback" tabindex="-1" aria-labelledby="modalCallback" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="modal-close up" data-bs-dismiss="modal" aria-label="Close">
+						<svg fill="currentColor">
+							<use href="files/images/icons/sprite.svg#x-lg"></use>
+						</svg>
+					</button>
+					<div class="h3 modal-title">Оставьте заявку</div>
+					<form action="" method="post" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+						<div class="form__group">
+							<input type="text" class="form__input" placeholder="*Имя" name="name" value="">
+						</div>
+						<div class="form__group">
+							<input type="text" class="form__input phonemask" placeholder="*Телефон" name="phone"
+								value="">
+						</div>
+						<div class="form__group">
+							<input type="email" class="form__input" placeholder="Email" name="email" value="">
+						</div>
+						<div class="form__group">
+							<button type="submit" class="button button--primary button--fluid">Отправить</button>
+						</div>
+						<p class="personal">Нажимая на кнопку «Отправить», я даю согласие на <a href="policy.html"
+								target="_blank">обработку персональных данных</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--modalOrder-->
+	<div class="modal fade" id="modalOrder" tabindex="-1" aria-labelledby="modalCallback" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="modal-close up" data-bs-dismiss="modal" aria-label="Close">
+						<svg fill="currentColor">
+							<use href="files/images/icons/sprite.svg#x-lg"></use>
+						</svg>
+					</button>
+					<div class="h3 modal-title" id="modalTitle">Оставьте заявку</div>
+					<form action="" method="post" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+						<div class="form__group">
+							<input type="text" class="form__input" placeholder="*Имя" name="name" value="">
+						</div>
+						<div class="form__group">
+							<input type="text" class="form__input phonemask" placeholder="*Телефон" name="phone"
+								value="">
+						</div>
+						<div class="form__group">
+							<input type="email" class="form__input" placeholder="Email" name="email" value="">
+						</div>
+						<div class="form__group">
+							<button type="submit" class="button button--primary button--fluid">Отправить</button>
+						</div>
+						<p class="personal">Нажимая на кнопку «Отправить», я даю согласие на <a href="policy.html"
+								target="_blank">обработку персональных данных</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--successModal-->
+	<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="modal-close up" data-bs-dismiss="modal" aria-label="Close">
+						<svg fill="currentColor">
+							<use href="files/images/icons/sprite.svg#x-lg"></use>
+						</svg>
+					</button>
+					<div class="successModal-text">
+						<svg>
+							<use xlink:href="files/images/icons/sprite.svg#callback-icon"></use>
+						</svg>
+						Сообщение успешно отправлено.<br>Мы скоро с Вами свяжемся
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--errorModal-->
+	<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="modal-close up" data-bs-dismiss="modal" aria-label="Close">
+						<svg fill="currentColor">
+							<use href="files/images/icons/sprite.svg#x-lg"></use>
+						</svg>
+					</button>
+					<div class="errorModal-text">
+						<svg>
+							<use xlink:href="files/images/icons/sprite.svg#callback-icon"></use>
+						</svg>
+						Ошибка. Сообщение не отправлено. Попробуйте еще раз
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!--mobile-menu-->
@@ -731,89 +781,129 @@
 				<img src="files/images/logo-dark.svg" alt="Weeco">
 			</a>
 			<span class="mobile-menu__close">
-				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg" viewbox="0 0 16 16">
-					  <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"></path>
-					  <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"></path>
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg"
+					viewbox="0 0 16 16">
+					<path fill-rule="evenodd"
+						d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"></path>
+					<path fill-rule="evenodd"
+						d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"></path>
 				</svg>
 			</span>
 		</div>
 		<div class="mobile-menu__body">
-			<ul class="mobile-menu__list"><li class="mobile-menu__item active"><a class="mobile-menu__link" href="index.htm">Главная</a></li><li class="mobile-menu__item"><a class="mobile-menu__link" href="plitka-dlya-stupeney.html">Плитка для ступеней</a></li>    <li class="mobile-menu__item">
-			<a class="mobile-menu__link" href="#collapse3" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse3">
-				<span>Продукция</span> 
-				<svg width="20" height="15" viewbox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M20 13C16.0392 10.3595 12.6405 6.96078 10 3C7.35948 6.96078 3.96078 10.3595 0 13" stroke-width="3"></path>
-				</svg>
-			</a>
-			
-			<ul class="mobile-menu-sub collapse" id="collapse3"><li class="mobile-menu__item"><a class="mobile-menu-sub__link" href="plitka-dlya-stupeney.html">Плитка для ступеней</a></li><li class="mobile-menu__item"><a class="mobile-menu-sub__link" href="taktilnaya-plitka.html">Тактильная плитка</a></li><li class="mobile-menu__item"><a class="mobile-menu-sub__link" href="kolpaki.html">Колпаки</a></li></ul>
-		</li>
-	   <li class="mobile-menu__item"><a class="mobile-menu__link" href="product.html">Каталог</a></li>
-	   
-		<li class="mobile-menu__item">
-			<a class="mobile-menu__link" href="#collapse39" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse39">
-				<span>Компания</span> 
-				<svg width="20" height="15" viewbox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M20 13C16.0392 10.3595 12.6405 6.96078 10 3C7.35948 6.96078 3.96078 10.3595 0 13" stroke-width="3"></path>
-				</svg>
-			</a>
-			
-			<ul class="mobile-menu-sub collapse" id="collapse39"><li class="mobile-menu__item"><a class="mobile-menu-sub__link" href="o-kompanii.html">О компании</a></li><li class="mobile-menu__item"><a class="mobile-menu-sub__link" href="blog.html">Блог</a></li><li class="mobile-menu__item"><a class="mobile-menu-sub__link" href="kontaktyi.html">Контакты</a></li></ul>
-		</li>
-		<li class="mobile-menu__item">
-			<a class="mobile-menu__link" href="#collapse36" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse36">
-				<span>Партнерам</span> 
-				<svg width="20" height="15" viewbox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M20 13C16.0392 10.3595 12.6405 6.96078 10 3C7.35948 6.96078 3.96078 10.3595 0 13" stroke-width="3"></path>
-				</svg>
-			</a>
-			
-			<ul class="mobile-menu-sub collapse" id="collapse36"><li class="mobile-menu__item"><a class="mobile-menu-sub__link" href="optovyim-pokupatelyam.html">Оптовым покупателям</a></li><li class="mobile-menu__item"><a class="mobile-menu-sub__link" href="masteram-i-stroitelnyim-organizacziyam.html">Мастерам и строительным организациям</a></li></ul>
-		</li>
-	</ul>    </div>
-		<div class="mobile-menu__footer">
-	<ul class="contact-list">
-		<li class="contact-list__item">
-			<div class="">
-				<div class="contact-list__phones">
-					<a class="contact-list__phone" href="tel:+74952665308">+7 (495) 266-53-08</a>
-					<a class="contact-list__phone" href="tel:+79311061351">+7 (931) 106-13-51</a>
-				</div>
-				<div class="contact-list__social">
-					<ul class="social social--contact">
-						<li class="social__item">
-							<a class="social__link" href="https://vk.com" target="_blank">
-								<svg fill="currentColor"><use href="files/images/icons/sprite.svg#vk"></use></svg>
-							</a>
-						</li>
-						<li class="social__item">
-							<a class="social__link" href="https://www.youtube.com/" target="_blank">
-								<svg fill="currentColor"><use href="files/images/icons/sprite.svg#youtube"></use></svg>
-							</a>
-						</li>
-						<li class="social__item">
-							<a class="social__link" href="https://ya.ru" target="_blank">
-								<svg fill="currentColor"><use href="files/images/icons/sprite.svg#yadzen"></use></svg>
-							</a>
+			<ul class="mobile-menu__list">
+				<li class="mobile-menu__item active"><a class="mobile-menu__link" href="index.htm">Главная</a></li>
+				<li class="mobile-menu__item"><a class="mobile-menu__link" href="plitka-dlya-stupeney.html">Плитка для
+						ступеней</a></li>
+				<li class="mobile-menu__item">
+					<a class="mobile-menu__link" href="#collapse3" data-bs-toggle="collapse" aria-expanded="false"
+						aria-controls="collapse3">
+						<span>Продукция</span>
+						<svg width="20" height="15" viewbox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20 13C16.0392 10.3595 12.6405 6.96078 10 3C7.35948 6.96078 3.96078 10.3595 0 13"
+								stroke-width="3"></path>
+						</svg>
+					</a>
+
+					<ul class="mobile-menu-sub collapse" id="collapse3">
+						<li class="mobile-menu__item"><a class="mobile-menu-sub__link"
+								href="plitka-dlya-stupeney.html">Плитка для ступеней</a></li>
+						<li class="mobile-menu__item"><a class="mobile-menu-sub__link"
+								href="taktilnaya-plitka.html">Тактильная плитка</a></li>
+						<li class="mobile-menu__item"><a class="mobile-menu-sub__link" href="kolpaki.html">Колпаки</a>
 						</li>
 					</ul>
-				</div>
-			</div>
-		</li>
-		<li class="contact-list__item">
-			<p><strong>Центральный офис:</strong><br> 428903, Чувашская Республика, г. Чебоксары,<br> Вурнарское шоссе д. 17, офис 311</p>
-		</li>
-		<li class="contact-list__item">
-			<p>пн-пт: 9:00 - 20:00, <br>сб-вс: 10:00 - 17:00</p>
-		</li>
-		<li class="contact-list__item">
-			<p><a href="mailto:weeco2018@mail.ru">weeco2018@mail.ru</a></p>
-		</li>
-	</ul>
-	
-	<button type="button" class="button button--primary button--small button--fluid ">Заказать звонок</button>
+				</li>
+				<li class="mobile-menu__item"><a class="mobile-menu__link" href="product.html">Каталог</a></li>
 
-</div>
+				<li class="mobile-menu__item">
+					<a class="mobile-menu__link" href="#collapse39" data-bs-toggle="collapse" aria-expanded="false"
+						aria-controls="collapse39">
+						<span>Компания</span>
+						<svg width="20" height="15" viewbox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20 13C16.0392 10.3595 12.6405 6.96078 10 3C7.35948 6.96078 3.96078 10.3595 0 13"
+								stroke-width="3"></path>
+						</svg>
+					</a>
+
+					<ul class="mobile-menu-sub collapse" id="collapse39">
+						<li class="mobile-menu__item"><a class="mobile-menu-sub__link" href="o-kompanii.html">О
+								компании</a></li>
+						<li class="mobile-menu__item"><a class="mobile-menu-sub__link" href="blog.html">Блог</a></li>
+						<li class="mobile-menu__item"><a class="mobile-menu-sub__link"
+								href="kontaktyi.html">Контакты</a></li>
+					</ul>
+				</li>
+				<li class="mobile-menu__item">
+					<a class="mobile-menu__link" href="#collapse36" data-bs-toggle="collapse" aria-expanded="false"
+						aria-controls="collapse36">
+						<span>Партнерам</span>
+						<svg width="20" height="15" viewbox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20 13C16.0392 10.3595 12.6405 6.96078 10 3C7.35948 6.96078 3.96078 10.3595 0 13"
+								stroke-width="3"></path>
+						</svg>
+					</a>
+
+					<ul class="mobile-menu-sub collapse" id="collapse36">
+						<li class="mobile-menu__item"><a class="mobile-menu-sub__link"
+								href="optovyim-pokupatelyam.html">Оптовым покупателям</a></li>
+						<li class="mobile-menu__item"><a class="mobile-menu-sub__link"
+								href="masteram-i-stroitelnyim-organizacziyam.html">Мастерам и строительным
+								организациям</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="mobile-menu__footer">
+			<ul class="contact-list">
+				<li class="contact-list__item">
+					<div class="">
+						<div class="contact-list__phones">
+							<a class="contact-list__phone" href="tel:+74952665308">+7 (495) 266-53-08</a>
+							<a class="contact-list__phone" href="tel:+79311061351">+7 (931) 106-13-51</a>
+						</div>
+						<div class="contact-list__social">
+							<ul class="social social--contact">
+								<li class="social__item">
+									<a class="social__link" href="https://vk.com" target="_blank">
+										<svg fill="currentColor">
+											<use href="files/images/icons/sprite.svg#vk"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link" href="https://www.youtube.com/" target="_blank">
+										<svg fill="currentColor">
+											<use href="files/images/icons/sprite.svg#youtube"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link" href="https://ya.ru" target="_blank">
+										<svg fill="currentColor">
+											<use href="files/images/icons/sprite.svg#yadzen"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="contact-list__item">
+					<p><strong>Центральный офис:</strong><br> 428903, Чувашская Республика, г. Чебоксары,<br> Вурнарское
+						шоссе д. 17, офис 311</p>
+				</li>
+				<li class="contact-list__item">
+					<p>пн-пт: 9:00 - 20:00, <br>сб-вс: 10:00 - 17:00</p>
+				</li>
+				<li class="contact-list__item">
+					<p><a href="mailto:weeco2018@mail.ru">weeco2018@mail.ru</a></p>
+				</li>
+			</ul>
+
+			<button type="button" class="button button--primary button--small button--fluid ">Заказать звонок</button>
+
+		</div>
 	</div>
 	<!--scripts-->
 	<script src="files/libs/jquery/jquery-3.6.4.min.js"></script>
@@ -825,8 +915,8 @@
 	<script src="files/libs/phonemask/maskedinput.js"></script>
 	<script src="files/libs/fancyapps/fancybox.umd.js"></script>
 	<script src="files/libs/readmore/readmore.min.js"></script>
-	<script src="files/js/app.js?v=11082023121907"></script>
-	<script src="files/js/slider.js?v=11082023121907"></script>
+	<script src="files/js/app.js"></script>
+	<script src="files/js/slider.js"></script>
 	<!-- <script src="kviz.js"></script>-->
 	<script type="text/javascript">
 		if (typeof jQuery == "undefined") {
@@ -835,11 +925,10 @@
 	</script>
 	<script src="assets/components/lazyload/js/web/lib/lazyload.js"></script>
 	<script src="assets/components/lazyload/js/web/default.js"></script>
-<!-- 	<script src="assets/components/minishop2/js/web/default.js?v=ba5761da20"></script>
+	<script src="assets/components/minishop2/js/web/default.js"></script>
 	<script src="assets/components/minishop2/js/web/lib/jquery.jgrowl.min.js"></script>
-	<script src="assets/components/minishop2/js/web/message_settings.js"></script> -->
+	<script src="assets/components/minishop2/js/web/message_settings.js"></script>
 	<script src="assets/components/ajaxform/js/default.js"></script>
-	
 
 	<!-- <script type="text/javascript">AjaxForm.initialize({"assetsUrl":"\/assets\/components\/ajaxform\/","actionUrl":"\/assets\/components\/ajaxform\/action.php","closeMessage":"\u0437\u0430\u043a\u0440\u044b\u0442\u044c \u0432\u0441\u0435","formSelector":"form.ajax_form","pageId":1});</script>
  -->

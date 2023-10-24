@@ -4416,7 +4416,7 @@ body .modal-backdrop {
 .product-slider-main .slider-arrow--top {
   position: absolute;
   top: -2.2rem;
-  left: 38.5px;
+  left: 33.5px;
   width: 23px;
   height: 44px;
   z-index: 10;
@@ -4425,7 +4425,7 @@ body .modal-backdrop {
 .product-slider-main .slider-arrow--bottom {
   position: absolute;
   bottom: -2.2rem;
-  left: 38.5px;
+  left: 33.5px;
   width: 23px;
   height: 44px;
   z-index: 10;
@@ -4529,6 +4529,7 @@ body .modal-backdrop {
 
 .product-where {
   position: relative;
+  overflow:hidden;
 }
 
 .product-where .container {

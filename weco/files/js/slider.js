@@ -4,8 +4,6 @@ var swiper = new Swiper(".rating-slider", {
 	slidesPerGroup: 1,
 	spaceBetween: 0,
 	loop: false,
-	observe: true,
-    observeParents: true,
 	navigation: {
         nextEl: ".rating-slider-next",
         prevEl: ".rating-slider-prev",
@@ -50,8 +48,8 @@ var swiper_for = new Swiper(".product-slider__for", {
 	breakpoints: {
 		1199.98: {
 			navigation: {
-				nextEl: '.product-slider-main .slider-arrow--top',
-				prevEl: '.product-slider-main .slider-arrow--bottom',
+				nextEl: '.product-slider-main .slider-arrow--bottom',
+				prevEl: '.product-slider-main .slider-arrow--top',
 			}
 		},
 	}
@@ -90,7 +88,7 @@ function swiperDesctop() {
 			// reviews slider
 	
 			swiperReviews = new Swiper(".reviews-slider", {
-				slidesPerView: 2.25,
+				slidesPerView: 2,
 				spaceBetween: 30,
 				loop: true,
 				autoHeight: true,
@@ -100,7 +98,7 @@ function swiperDesctop() {
 				},
 				breakpoints: {
 					1199.98: {
-						slidesPerView: 3.25,
+						slidesPerView: 3,
 						spaceBetween: 30,
 					}
 				}
@@ -109,7 +107,7 @@ function swiperDesctop() {
 
 			// portfolio-slider
 			swiper = new Swiper(".portfolio-slider", {
-				slidesPerView: 2.25,
+				slidesPerView: 2,
 				spaceBetween: 30,
 				loop: false,
 				navigation: {
@@ -118,7 +116,7 @@ function swiperDesctop() {
 				},
 				breakpoints: {
 					1199.98: {
-						slidesPerView: 3.25,
+						slidesPerView: 3,
 						spaceBetween: 30,
 					}
 				}
@@ -137,11 +135,11 @@ function swiperDesctop() {
 				},
 				breakpoints: {
 					1199.98: {
-						slidesPerView: 3.25,
+						slidesPerView: 3,
 						spaceBetween: 30,
 					},
 					1399.98: {
-						slidesPerView: 4.25,
+						slidesPerView: 4,
 						spaceBetween: 30,
 					}
 				}
@@ -149,7 +147,7 @@ function swiperDesctop() {
 			
 
 			// certificate slider
-			/* swiper = new Swiper(".certificate-slider", {
+		 	swiper = new Swiper(".certificate-slider", {
 				slidesPerView: 4,
 				spaceBetween: 30,
 				loop: false,
@@ -167,11 +165,11 @@ function swiperDesctop() {
 						spaceBetween: 30,
 					}
 				}
-			}); */
+			}); 
 			
 			// history-slider
 			swiper = new Swiper(".history-slider", {
-				slidesPerView: 2.25,
+				slidesPerView: 2,
 				spaceBetween: 30,
 				loop: true,
 				autoHeight: true,
@@ -181,7 +179,7 @@ function swiperDesctop() {
 				},
 				breakpoints: {
 					1199.98: {
-						slidesPerView: 3.25,
+						slidesPerView: 3,
 						spaceBetween: 30,
 					}
 				}
@@ -189,16 +187,15 @@ function swiperDesctop() {
 
 			// personal-slider
 			swiper = new Swiper(".personal-slider", {
-				slidesPerView: 2.25,
+				slidesPerView: 2,
 				spaceBetween: 30,
-				loop: true,
 				navigation: {
 					nextEl: ".personal__buttons .slider-buttons__next",
 					prevEl: ".personal__buttons .slider-buttons__prev",
 				},
 				breakpoints: {
 					1199.98: {
-						slidesPerView: 3.25,
+						slidesPerView: 3,
 						spaceBetween: 30,
 					}
 				}
@@ -206,7 +203,7 @@ function swiperDesctop() {
 			
 			// cooperation-slider
 			swiper = new Swiper(".cooperation-slider", {
-				slidesPerView: 2.25,
+				slidesPerView: 2,
 				spaceBetween: 30,
 				loop: true,
 				autoHeight: true,
@@ -216,7 +213,7 @@ function swiperDesctop() {
 				},
 				breakpoints: {
 					1199.98: {
-						slidesPerView: 3.25,
+						slidesPerView: 3,
 						spaceBetween: 30,
 					}
 				}

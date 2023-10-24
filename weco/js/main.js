@@ -293,7 +293,48 @@ if (stepper) {
       item.querySelector(".form__number-button-left").style.pointerEvents = "none"
     }
     inp.addEventListener("change", checkMinValue)
-    item.querySelector(".form__number-button-right").addEventListener("click", checkMinValue)
-    item.querySelector(".form__number-button-left").addEventListener("click", checkMinValue)
+    item.querySelector(".form__number-button-right").addEventListener("click",()=> {
+      inp.value = +item.querySelector("input").value + Number(inp.getAttribute("step"))
+      checkMinValue()
+    })
+    item.querySelector(".form__number-button-left").addEventListener("click",()  => {
+      inp.value = +inp.value - Number(inp.getAttribute("step"))
+      checkMinValue()
+    })
+  })
+}
+const promocode = document.querySelector(".promocode")
+if (document.querySelector(".promo-btn")) {
+  document.querySelector(".promo-btn").addEventListener("click", () => {
+    if (!promocode.classList.contains("show")) {
+      promocode.classList.add("show")
+      promocode.querySelector("input").focus()
+    } else {
+      promocode.classList.remove("show")
+      promocode.querySelector("input").value = ""
+    }
+  })
+}
+const cartItem = document.querySelectorAll(".cart__item")
+if (cartItem) {
+  cartItem.forEach(item => {
+    const formToggle = item.querySelector(".form-toggle")
+    const jsStepper = item.querySelector(".stepper")
+    const unit = item.querySelector(".d-price small")
+    formToggle.querySelectorAll("input").forEach (inp => {
+      let step = jsStepper.querySelector("input").getAttribute("step")
+      inp.addEventListener("change", () => {
+        let value = jsStepper.querySelector("input").value
+        if (formToggle.querySelector("input:checked").value === "шт") {
+          jsStepper.querySelector("input").value = value * step;
+          jsStepper.querySelector("input").setAttribute("step", step)
+          unit.textContent = "/шт"
+        } else {
+          jsStepper.querySelector("input").value = Math.ceil(value / step);
+          jsStepper.querySelector("input").setAttribute("step", "1")
+          unit.textContent = "/уп"
+        }
+      })
+    })
   })
 }

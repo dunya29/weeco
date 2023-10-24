@@ -323,11 +323,11 @@
   }
 
   .product-slider-main .slider-arrow--top {
-    left: 28.5px;
+    left: 23.5px;
   }
 
   .product-slider-main .slider-arrow--bottom {
-    left: 28.5px;
+    left: 23.5px;
   }
 }
 
@@ -702,9 +702,7 @@
   }
 
   .reviews-slider .swiper-wrapper {
-    overflow: hidden;
     position: relative;
-    overflow-x: visible;
     padding-bottom: 2rem;
   }
 
@@ -959,9 +957,7 @@
   }
 
   .product-slider .swiper-wrapper {
-    overflow: hidden;
     position: relative;
-    overflow-x: visible;
     padding-bottom: 2rem;
   }
 
