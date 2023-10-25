@@ -2837,7 +2837,8 @@ h2.section__title span {
   }
 
   .cart__item .d-discount,
-  .cart__item .d-price {
+  .cart__item .d-price,
+  .cart__item .ms-price {
     font-size: 1.2rem;
   }
 
