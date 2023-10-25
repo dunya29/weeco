@@ -277,7 +277,7 @@ if (lazyVid) {
 /* document.querySelector("select").addEventListener("change", ()=> {
   document.querySelector("select").querySelector("option:first-child").style.display = "none"
 }) */
-const stepper = document.querySelectorAll(".stepper")
+/* const stepper = document.querySelectorAll(".stepper")
 if (stepper) {
   stepper.forEach(item => {
     let inp = item.querySelector("input[type=number]")
@@ -294,15 +294,15 @@ if (stepper) {
     }
     inp.addEventListener("change", checkMinValue)
     item.querySelector(".form__number-button-right").addEventListener("click",()=> {
-      inp.value = +item.querySelector("input").value + Number(inp.getAttribute("step"))
+      inp.value = +item.querySelector("input").value + Number(inp.getAttribute("data-step"))
       checkMinValue()
     })
     item.querySelector(".form__number-button-left").addEventListener("click",()  => {
-      inp.value = +inp.value - Number(inp.getAttribute("step"))
+      inp.value = +inp.value - Number(inp.getAttribute("data-step"))
       checkMinValue()
     })
   })
-}
+} */
 const promocode = document.querySelector(".promocode")
 if (document.querySelector(".promo-btn")) {
   document.querySelector(".promo-btn").addEventListener("click", () => {
@@ -319,6 +319,83 @@ const cartItem = document.querySelectorAll(".cart__item")
 if (cartItem) {
   cartItem.forEach(item => {
     const formToggle = item.querySelector(".form-toggle")
+    const amountInput = item.querySelector(".form__number input[name='count']");
+    const increaseButton = item.querySelector(".form__number-button-right");
+    const decreaseButton = item.querySelector(".form__number-button-left");
+    const choiceUnit = item.querySelector(".d-price small")
+    const step = Number(amountInput.getAttribute("data-step")) 
+    let choice = amountInput.getAttribute("data-packages")
+    if (formToggle) {
+      formToggle.querySelectorAll("input").forEach((input) => {
+        input.addEventListener("change", updateChoice);
+      });
+    }
+    increaseButton.addEventListener("click", increaseValue);
+    decreaseButton.addEventListener("click", decreaseValue);
+    
+    amountInput.addEventListener("blur", roundValueToMultipleOfFour);
+    amountInput.addEventListener("input", validateInput); 
+
+    function setDefaultValue() {
+      amountInput.value = 1;
+      updateValue();
+    }
+    setDefaultValue()
+    function updateChoice() {
+      choice = formToggle.querySelector('.form-toggle__item input:checked').value;
+      updateValue()
+    }
+    function updateValue() {
+    /*   const choice = formToggle.querySelector('.form-toggle__item input:checked').value; */
+      choiceUnit.textContent = "/" + choice;
+      if (choice === "шт") {
+        amountInput.value = amountInput.value * step;
+      } else {
+        amountInput.value = Math.ceil(amountInput.value / step);
+      }
+    }
+    function increaseValue() {
+      /* const choice = formToggle.querySelector('.form-toggle__item input:checked').value; */
+      if (choice === "шт") {
+        amountInput.value = +amountInput.value + step;
+      } else {
+        amountInput.value = +amountInput.value + 1
+      }
+    }  
+    function decreaseValue() {
+    /*   const choice = formToggle.querySelector('.form-toggle__item input:checked').value; */
+      if ( (amountInput.value > step && choice === "шт") ||  (amountInput.value > 1 && choice === "уп")) {
+        if (choice === "шт") {
+          amountInput.value = +amountInput.value - step;
+        } else {
+          amountInput.value = +amountInput.value - 1
+        }
+      }
+    }   
+    function roundValueToMultipleOfFour() {
+      /* const choice = formToggle.querySelector('.form-toggle__item input:checked').value; */
+      if (choice === "шт") {
+        const value = parseInt(amountInput.value);
+        if (!isNaN(value)) {
+          amountInput.value = Math.ceil(value / step) * step;
+        }
+      }
+    }  
+    function validateInput() {
+      const value = amountInput.value.trim();
+      if (value.length === 0) {
+        amountInput.value = 1;
+      } else {
+        const number = parseFloat(value);
+        if (isNaN(number) || number <= 0) {
+          amountInput.value = 1;
+        } else {
+          amountInput.value = number;
+        }
+      }
+    }
+
+  /*   if (formToggle) {
     const jsStepper = item.querySelector(".stepper")
     const unit = item.querySelector(".d-price small")
     formToggle.querySelectorAll("input").forEach (inp => {
@@ -336,8 +413,10 @@ if (cartItem) {
         }
       })
     })
+    }
+*/
   })
-}
+} 
 const deliveries = document.querySelector("#deliveries")
 if (deliveries) {
   deliveries.querySelectorAll("input").forEach(inp => {

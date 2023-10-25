@@ -34,6 +34,10 @@
   align-items: flex-end;
 }
 
+.cart__item .stepper {
+  margin-bottom: 12px;
+}
+
 .cart__item .stepper input {
   width: 50px;
   font-weight: 600;
@@ -46,7 +50,7 @@
   -ms-flex-pack: center;
   justify-content: center;
   border-radius: 0;
-  margin: 12px 0;
+  margin-bottom: 12px;
 }
 
 .cart__item .form-toggle__item {

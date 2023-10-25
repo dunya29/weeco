@@ -1,5 +1,5 @@
-
 let mobile = 768
+//set fixedBtn link
 let fixedBtn = document.querySelector(".fixed-btn")
 function setFixedBtnLink() {
   if (window.innerWidth > 1024) {
@@ -12,6 +12,14 @@ if (fixedBtn) {
   setFixedBtnLink()
   window.addEventListener("resize",setFixedBtnLink)
 } 
+//file-form error
+function fileFormOnError(formGroup) {
+  formGroup.classList.remove("checked")
+  formGroup.classList.add("error")
+  formGroup.querySelector("input[type=file]").value = ""
+  formGroup.querySelector(".file-form__name").textContent =""
+
+}
 // formSuccess
 function formSuccess(form) {
   form.querySelectorAll(".form__group").forEach(item => item.classList.remove("error"))
@@ -29,6 +37,7 @@ function formSuccess(form) {
     form.querySelector(".file-form").classList.remove("error")
     form.querySelector(".file-form__name").textContent = ""
   }
+
   let modal = document.querySelector(".modal.show")
   if (modal) {
     $(modal).modal('hide');
@@ -43,17 +52,26 @@ document.querySelectorAll(".file-form").forEach(item => {
 		let file = files[i]
     item.classList.remove("error")
 		item.classList.add("checked")
-		item.querySelector(".file-form__name").textContent = file.name
+		if (file.name.length> 35 ) 
+		{ item.querySelector(".file-form__name").textContent = file.name.substr(0, 35) + "..." }
+		else { item.querySelector(".file-form__name").textContent = file.name }
+		if (file.size > 2000000) {
+    		$(".file-form__error").show();
+            $(".file-form__txt").hide();
+            //item.querySelector("input[type=file]").value = ""
+            item.querySelector(".file-form__name").style.color = "#ff0000";
+		} else {
+    		$(".file-form__error").hide();
+            $(".file-form__txt").show();
+		}
+		$file_type = file.name.split('.').pop();
+        if($file_type!="jpeg" && $file_type!="jpg"  && $file_type!="png"){
+            item.querySelector(".file-form__error").textContent = "Ошибка: Допускаются файлы только jpeg, jpg, png"
+        }
+
 	  }
 	})
 })
-//file-form error
-function fileFormOnError(formGroup) {
-  formGroup.classList.remove("checked")
-  formGroup.classList.add("error")
-  formGroup.querySelector("input").value = ""
-  formGroup.querySelector(".file-form__name").textContent =""
-}
 //work swiper
 let initworkSwiper = false
 let swiperwork
@@ -84,8 +102,8 @@ function workSwiper() {
 }
 if (document.querySelector(".work-gallery")) {
 	workSwiper();
+  window.addEventListener("resize", workSwiper)
 }
-window.addEventListener("resize", workSwiper)
 
 //photo gallery swiper
 let initphotoSwiper = false
@@ -117,8 +135,8 @@ function photoSwiper() {
 }
 if (document.querySelector(".photo-gallery")) {
 	photoSwiper();
+  window.addEventListener("resize", photoSwiper)
 }
-window.addEventListener("resize", photoSwiper)
 
 //delivery swiper
 let initdeliverySwiper = false
@@ -156,8 +174,8 @@ function deliverySwiper() {
 }
 if (document.querySelector(".delivery")) {
 	deliverySwiper();
+  window.addEventListener("resize", deliverySwiper)
 }
-window.addEventListener("resize", deliverySwiper)
 
 //unshow swiper scrollbar when enabled
 const scrollBar = document.querySelectorAll(".swiper-scrollbar-wrap")
@@ -181,6 +199,7 @@ window.addEventListener("resize", unshowScrollbar)
 const choiceForm = document.querySelector(".choice-form")
 const choiceFormBtn = document.querySelector(".choice-form__btn")
 const modalOrderPlate = document.querySelector("#modalOrderPlate")
+
 if (choiceFormBtn) {
   choiceFormBtn.addEventListener("click", ()=> {
     let collection = choiceForm.querySelector("input[name=collection]:checked").value
@@ -192,34 +211,76 @@ if (choiceFormBtn) {
   })
 }
 // set order form img
+
+function setCollection(collection){
+
+  collection = choiceForm.querySelector("input[name=collection]:checked").getAttribute("data-val")
+  let n_color = choiceForm.querySelector(`picture[data-collection="${collection}"]`).getAttribute("data-color")
+  let n_type = choiceForm.querySelector(`picture[data-collection="${collection}"]`).getAttribute("data-type")
+  choiceForm.querySelector(`input[data-val="${n_color}"]`).checked = true
+  choiceForm.querySelector(`input[data-val="${n_type}"]`).checked = true
+}
+
 function setChoiceImg() {
-  choiceForm.querySelector(".choice-form__img").computedStyleMap.opacity = "0"
-  let collection = choiceForm.querySelector("input[name=collection]:checked").getAttribute("data-val")
-  let type = choiceForm.querySelector("input[name=type]:checked").getAttribute("data-val")
-  let color = choiceForm.querySelector("input[name=color]:checked").getAttribute("data-val")
-  let src = "img/plitki/" + collection + "-" + type + "-" + color
-    choiceForm.querySelector(".choice-form__img").innerHTML = `<picture>
-    <source srcset=${src}.jpg type="image/webp">
-    <img src=${src}.jpg alt="Выбор плитки">
-   </picture>`
-   choiceForm.querySelector(".choice-form__img").computedStyleMap.opacity = "1"
+
+if (choiceForm.querySelectorAll("label[data-collection]")) {
+ collection = choiceForm.querySelector("input[name=collection]:checked").getAttribute("data-val")
+} else {collection = ""}
+let color = choiceForm.querySelector("input[name=color]:checked").getAttribute("data-val")
+let type = choiceForm.querySelector("input[name=type]:checked").getAttribute("data-val")
+let picture = collection + color + type 
+
+
+if (choiceForm.querySelectorAll("label[data-color]")) {
+choiceForm.querySelectorAll("label[data-color]").forEach(function(element) {
+    let datcolor = element.getAttribute("data-color")
+    if (choiceForm.querySelector(`picture[data-collection="${collection}"][data-color="${datcolor}"][data-type="${type}"]`))
+    {
+        element.style.display = 'block';
+    }
+    else {
+        element.style.display = 'none';
+    }
+});
 }
-function setPrice() {
-  let collPrice = +choiceForm.querySelector("input[name=collection]:checked").getAttribute("data-price")
-  let typePrice = +choiceForm.querySelector("input[name=type]:checked").getAttribute("data-price")
-  let colorPrice = +choiceForm.querySelector("input[name=color]:checked").getAttribute("data-price")
-  let price = collPrice + typePrice + colorPrice
-  choiceForm.querySelector(".choice-form__price").textContent = "Цена: " + price + " руб./шт"
+
+if (choiceForm.querySelectorAll("label[data-type]")) {
+choiceForm.querySelectorAll("label[data-type]").forEach(function(element) {
+    let dattype = element.getAttribute("data-type")
+    if (choiceForm.querySelector(`picture[data-collection="${collection}"][data-color="${color}"][data-type="${dattype}"]`))
+    {
+        element.style.display = 'block';
+    }
+    else {
+        element.style.display = 'none';
+    }
+});
 }
+
+if (choiceForm.querySelector("picture.d-block"))
+{
+choiceForm.querySelector("picture.d-block").classList.remove("d-block")
+choiceForm.querySelector(".choice-form__price.d-block").classList.remove("d-block")
+}
+
+choiceForm.querySelector(`picture[data-val="${picture}"]`).classList.add("d-block")
+choiceForm.querySelector(`.choice-form__price[data-val="${picture}"]`).classList.add("d-block")
+
+}
+
 if (choiceForm) {
   setChoiceImg()
-  setPrice()
+   choiceForm.querySelectorAll("input[name=collection]").forEach(inpc => {
+    inpc.addEventListener("change", () => {
+      setCollection()
+    })
+  })
   choiceForm.querySelectorAll("input[type=radio]").forEach(inp => {
     inp.addEventListener("change", () => {
       setChoiceImg()
-      setPrice()
     })
   })
+   
 }
 //close menu 
 const mobmenu = document.querySelector(".mobile-menu")
@@ -231,6 +292,7 @@ mobmenu.querySelector(".button--primary").addEventListener("click", e => {
     $('#modalCallback').modal('show');
   }, 400);
 })
+
 function loadYT() {
   let tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
@@ -242,67 +304,21 @@ const lazyVid = document.querySelectorAll(".lazyload-video")
 if (lazyVid) {
   lazyVid.forEach(vid => {
     vid.addEventListener("click", function lazyVidOnClick() {
-  /*     if (vid.querySelector("video")) {    
-        let url = vid.getAttribute("data-src"); 
-        let webmUrl = vid.getAttribute("data-webm");
-        let webm = "" !== vid.querySelector("video").canPlayType('video/webm; codecs="vp8, vorbis"')
-        if (webm && webmUrl) {
-          vid.querySelector("video").innerHTML = `<source src="${webmUrl}" type='video/webm'>`
-        } else {
-          vid.querySelector("video").innerHTML = `<source src="${url}">`
-        }
-        setTimeout(() => {
-          vid.querySelector("video").play()
-          vid.querySelector("video").controls = true
-          vid.querySelector("video").style.zIndex = 2
-        }, 0); 
-        
-      } else {*/
-        let regex = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/|shorts\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/
-        let url = vid.getAttribute("data-src");
-        let videoId = url.match(regex)[1]
-        let iframe = document.createElement( "iframe" );
-        iframe.setAttribute("frameborder", "0");
-        iframe.setAttribute("allowfullscreen", "");
-        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
-        iframe.setAttribute("src", "https://www.youtube.com/embed/"+ videoId +"?rel=0&showinfo=0&autoplay=1");
-        vid.innerHTML = "";
-        vid.appendChild( iframe );  
-        vid.querySelector("iframe").muted = true
-     // }
+      let regex = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/|shorts\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/
+      let url = vid.getAttribute("data-src");
+      let videoId = url.match(regex)[1]
+      let iframe = document.createElement( "iframe" );
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+      iframe.setAttribute("src", "https://www.youtube.com/embed/"+ videoId +"?rel=0&showinfo=0&autoplay=1");
+      vid.innerHTML = "";
+      vid.appendChild( iframe );
       vid.removeEventListener("click", lazyVidOnClick)
     })
 })
 }
-/* document.querySelector("select").addEventListener("change", ()=> {
-  document.querySelector("select").querySelector("option:first-child").style.display = "none"
-}) */
-/* const stepper = document.querySelectorAll(".stepper")
-if (stepper) {
-  stepper.forEach(item => {
-    let inp = item.querySelector("input[type=number]")
-    function checkMinValue() {
-      if (inp.value <= +inp.step.trim()) {
-        item.querySelector(".form__number-button-left").style.pointerEvents = "none"
-        inp.value = +inp.step.trim()
-      } else {
-        item.querySelector(".form__number-button-left").style.pointerEvents = ""
-      }
-    }
-    if (inp.value == +inp.step.trim()) {
-      item.querySelector(".form__number-button-left").style.pointerEvents = "none"
-    }
-    inp.addEventListener("change", checkMinValue)
-    item.querySelector(".form__number-button-right").addEventListener("click",()=> {
-      inp.value = +item.querySelector("input").value + Number(inp.getAttribute("data-step"))
-      checkMinValue()
-    })
-    item.querySelector(".form__number-button-left").addEventListener("click",()  => {
-      inp.value = +inp.value - Number(inp.getAttribute("data-step"))
-      checkMinValue()
-    })
-  })
-} */
+
 const promocode = document.querySelector(".promocode")
 if (document.querySelector(".promo-btn")) {
   document.querySelector(".promo-btn").addEventListener("click", () => {
@@ -346,7 +362,6 @@ if (cartItem) {
       updateValue()
     }
     function updateValue() {
-    /*   const choice = formToggle.querySelector('.form-toggle__item input:checked').value; */
       choiceUnit.textContent = "/" + choice;
       if (choice === "шт") {
         amountInput.value = amountInput.value * step;
@@ -355,7 +370,6 @@ if (cartItem) {
       }
     }
     function increaseValue() {
-      /* const choice = formToggle.querySelector('.form-toggle__item input:checked').value; */
       if (choice === "шт") {
         amountInput.value = +amountInput.value + step;
       } else {
@@ -363,7 +377,6 @@ if (cartItem) {
       }
     }  
     function decreaseValue() {
-    /*   const choice = formToggle.querySelector('.form-toggle__item input:checked').value; */
       if ( (amountInput.value > step && choice === "шт") ||  (amountInput.value > 1 && choice === "уп")) {
         if (choice === "шт") {
           amountInput.value = +amountInput.value - step;
@@ -373,7 +386,6 @@ if (cartItem) {
       }
     }   
     function roundValueToMultipleOfFour() {
-      /* const choice = formToggle.querySelector('.form-toggle__item input:checked').value; */
       if (choice === "шт") {
         const value = parseInt(amountInput.value);
         if (!isNaN(value)) {
@@ -394,28 +406,7 @@ if (cartItem) {
         }
       }
     }
-
-  /*   if (formToggle) {
-    const jsStepper = item.querySelector(".stepper")
-    const unit = item.querySelector(".d-price small")
-    formToggle.querySelectorAll("input").forEach (inp => {
-      let step = jsStepper.querySelector("input").getAttribute("step")
-      inp.addEventListener("change", () => {
-        let value = jsStepper.querySelector("input").value
-        if (formToggle.querySelector("input:checked").value === "шт") {
-          jsStepper.querySelector("input").value = value * step;
-          jsStepper.querySelector("input").setAttribute("step", step)
-          unit.textContent = "/шт"
-        } else {
-          jsStepper.querySelector("input").value = Math.ceil(value / step);
-          jsStepper.querySelector("input").setAttribute("step", "1")
-          unit.textContent = "/уп"
-        }
-      })
-    })
-    }
-*/
-  })
+})
 } 
 const deliveries = document.querySelector("#deliveries")
 if (deliveries) {
