@@ -225,8 +225,8 @@
 														</div>
 													</div>
 													<div class="col-12 col-md-3 col-lg-3 col-item text-center">
-														
-														 <div class="stepper form__number">
+
+														<div class="stepper form__number">
 															<button class="form__number-button-left" type="button"
 																spinner-button="down"
 																style="pointer-events: none;">−</button>
@@ -234,7 +234,7 @@
 																max="100" step="6" class="stepper__input">
 															<button class="form__number-button-right" type="button"
 																spinner-button="up">+</button>
-														</div> 
+														</div>
 														<div class="form-toggle">
 															<div class="form-toggle__item">
 																<input id="fid-0" type="radio" value="шт"
@@ -255,11 +255,13 @@
 														</div>
 													</div>
 													<div class="col-12 col-md-4 col-lg-3 col-item text-end">
-														<span class="d-discount">-547 ₽</span>
-														<del class="old_price">3702 ₽</del>
+														<div class="cart__item-discount">
+															<span class="d-discount">-547 ₽</span>
+															<del class="old_price">3702 ₽</del>
+														</div>
 														<div class="ms-cost"><span class="ms2_cost">3 702</span> ₽</div>
 														<a href="#" class="cart-remove" data-bs-toggle="tooltip"
-															data-bs-placement="top" data-bs-title="Удалить товар">
+															data-bs-placement="auto" data-bs-title="Удалить товар">
 															<svg fill="currentColor">
 																<use href="files/images/icons/sprite.svg#trash"></use>
 															</svg>
@@ -304,7 +306,16 @@
 											data-payments="[1,2,3,4,5]"><i></i>Доставка (рассчитывается менеджером
 										индивидуально) </label>
 								</div>
-								<div class="form__fieldset">
+								<div class="form__fieldset" id="cart-pickup">
+									<h4 class="form__title">Пункты самовывоза:</h4>
+									<label class="checkbox">
+										<input type="radio" name="pickup" value="1" checked=""><i></i>г. Чебоксары, Вурнарское
+										шоссе д. 17, офис 311</label>
+									<label class="checkbox">
+										<input type="radio" name="pickup" value="2"><i></i>г. Мытищи,
+										Ярмарочная 5. Навес 4-2 Россия, Московская обл.</label>
+								</div>
+								<div class="form__fieldset" id="cart-address">
 									<h4 class="form__title">Адрес доставки:</h4>
 
 									<div class="form__group">
@@ -382,7 +393,7 @@
 									<ul class="leaders">
 										<li class="total__block-count">
 											<div><span class="ms2_total_count">6</span> шт.</div>
-											<div><span class="rub" id="ms2_order_full_cost">3 900</span> ₽</div>
+											<div><span class="rub" id="ms2_order_full_cost">3 900</span></div>
 										</li>
 										<li class="mspc_discount_amount">
 											<div>Скидка<span class="mobile-hidden"> по акции</span></div>

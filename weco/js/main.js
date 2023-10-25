@@ -3,9 +3,9 @@ let mobile = 768
 let fixedBtn = document.querySelector(".fixed-btn")
 function setFixedBtnLink() {
   if (window.innerWidth > 1024) {
-    fixedBtn.setAttribute("href", "https://web.whatsapp.com/send?phone=79279983383&text=")
+    fixedBtn.setAttribute("href", "https://web.whatsapp.com/send?phone=79399006916&text=")
   } else {
-    fixedBtn.setAttribute("href", "https://api.whatsapp.com/send?phone=79279983383")
+    fixedBtn.setAttribute("href", "https://api.whatsapp.com/send?phone=79399006916")
   }
 }
 if (fixedBtn) {
@@ -335,6 +335,20 @@ if (cartItem) {
           unit.textContent = "/уп"
         }
       })
+    })
+  })
+}
+const deliveries = document.querySelector("#deliveries")
+if (deliveries) {
+  deliveries.querySelectorAll("input").forEach(inp => {
+    inp.addEventListener("change", ()=> {
+      if (inp.value == 2) {
+        document.querySelector("#cart-pickup").style.display = "none"
+        document.querySelector("#cart-address").style.display = "block"
+      } else {
+        document.querySelector("#cart-pickup").style.display = "block"
+        document.querySelector("#cart-address").style.display = "none"
+      }
     })
   })
 }
