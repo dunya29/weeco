@@ -325,22 +325,23 @@ if (cartItem) {
     const choiceUnit = item.querySelector(".d-price small")
     const step = Number(amountInput.getAttribute("data-step")) 
     let choice = amountInput.getAttribute("data-packages")
+    choiceUnit.textContent = "/" + choice;
     if (formToggle) {
+      formToggle.querySelectorAll("input").forEach(inp => {
+        if (inp.value === choice) {
+          inp.checked = true
+        }
+      })
       formToggle.querySelectorAll("input").forEach((input) => {
         input.addEventListener("change", updateChoice);
       });
     }
     increaseButton.addEventListener("click", increaseValue);
     decreaseButton.addEventListener("click", decreaseValue);
-    
+
     amountInput.addEventListener("blur", roundValueToMultipleOfFour);
     amountInput.addEventListener("input", validateInput); 
 
-    function setDefaultValue() {
-      amountInput.value = 1;
-      updateValue();
-    }
-    setDefaultValue()
     function updateChoice() {
       choice = formToggle.querySelector('.form-toggle__item input:checked').value;
       updateValue()

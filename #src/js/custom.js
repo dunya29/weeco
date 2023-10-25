@@ -341,27 +341,29 @@ if (cartItem) {
     const choiceUnit = item.querySelector(".d-price small")
     const step = Number(amountInput.getAttribute("data-step")) 
     let choice = amountInput.getAttribute("data-packages")
+    choiceUnit.textContent = "/" + choice;
     if (formToggle) {
+      formToggle.querySelectorAll("input").forEach(inp => {
+        if (inp.value === choice) {
+          inp.checked = true
+        }
+      })
       formToggle.querySelectorAll("input").forEach((input) => {
         input.addEventListener("change", updateChoice);
       });
     }
     increaseButton.addEventListener("click", increaseValue);
     decreaseButton.addEventListener("click", decreaseValue);
-    
+
     amountInput.addEventListener("blur", roundValueToMultipleOfFour);
     amountInput.addEventListener("input", validateInput); 
 
-    function setDefaultValue() {
-      amountInput.value = 1;
-      updateValue();
-    }
-    setDefaultValue()
     function updateChoice() {
       choice = formToggle.querySelector('.form-toggle__item input:checked').value;
       updateValue()
     }
     function updateValue() {
+    /*   const choice = formToggle.querySelector('.form-toggle__item input:checked').value; */
       choiceUnit.textContent = "/" + choice;
       if (choice === "шт") {
         amountInput.value = amountInput.value * step;
@@ -370,6 +372,7 @@ if (cartItem) {
       }
     }
     function increaseValue() {
+      /* const choice = formToggle.querySelector('.form-toggle__item input:checked').value; */
       if (choice === "шт") {
         amountInput.value = +amountInput.value + step;
       } else {
@@ -377,6 +380,7 @@ if (cartItem) {
       }
     }  
     function decreaseValue() {
+    /*   const choice = formToggle.querySelector('.form-toggle__item input:checked').value; */
       if ( (amountInput.value > step && choice === "шт") ||  (amountInput.value > 1 && choice === "уп")) {
         if (choice === "шт") {
           amountInput.value = +amountInput.value - step;
@@ -386,6 +390,7 @@ if (cartItem) {
       }
     }   
     function roundValueToMultipleOfFour() {
+      /* const choice = formToggle.querySelector('.form-toggle__item input:checked').value; */
       if (choice === "шт") {
         const value = parseInt(amountInput.value);
         if (!isNaN(value)) {
@@ -406,7 +411,7 @@ if (cartItem) {
         }
       }
     }
-})
+  })
 } 
 const deliveries = document.querySelector("#deliveries")
 if (deliveries) {
