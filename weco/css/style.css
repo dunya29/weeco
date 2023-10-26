@@ -5,10 +5,6 @@
   margin-left: 4px;
 }
 
-.js-form-address .cart {
-  margin-bottom: 0;
-}
-
 .js-form-address #cart-address {
   display: none;
 }
@@ -1817,11 +1813,7 @@ h2.section__title span {
 }
 
 @media (max-width: 991.98px) {
-  .js-form-address {
-    position: relative;
-  }
-
-  .js-form-address__actions {
+  .js-form-total {
     margin: 0 -5px;
     padding: 0;
     width: calc(100% + 10px);
