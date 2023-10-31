@@ -373,6 +373,16 @@ if (cartItem) {
         }
       }
     }   
+    function debounce(f, t) {
+      return function (args) {
+        let previousCall = this.lastCall;
+        this.lastCall = Date.now();
+        if (previousCall && ((this.lastCall-previousCall) <= t)) {
+          clearTimeout(this.lastCallTimer);
+        }
+        this.lastCallTimer = setTimeout(() => f(args), t);
+      }
+    }
     function roundValueToMultipleOfFour() {
       /* const choice = formToggle.querySelector('.form-toggle__item input:checked').value; */
       if (choice === "шт") {
@@ -381,6 +391,7 @@ if (cartItem) {
           amountInput.value = Math.ceil(value / step) * step;
         }
       }
+
     }  
     function validateInput() {
       const value = amountInput.value.trim();
@@ -430,5 +441,73 @@ if (deliveries) {
         document.querySelector("#cart-address").style.display = "none"
       }
     })
+  })
+}
+if (document.querySelector(".blog-toc")) {
+  document.querySelectorAll(".blog-toc a").forEach(item => {
+    item.addEventListener("click", e => {
+      e.preventDefault()
+      let windowTop = window.pageYOffset || document.documentElement.scrollTop
+      let dest = document.querySelector(item.getAttribute("href"))
+      window.scrollTo({ top: windowTop + dest.getBoundingClientRect().top - 80, behavior: 'smooth' })
+    })
+  })
+/*   $('.blog-toc a').on('click', function () {
+    let txt = $(this).attr('href');
+console.log($(txt).offset().top)
+    $('html, body').animate({
+        scrollTop: $(txt).offset().top - 80
+    },  'slow');
+
+    return false;
+}); */
+
+}
+if (document.querySelector(".blog-aside__swiper")) {
+  const blogAsideSwiper = new Swiper(".blog-aside__swiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    observe: true,
+    observeParents: true,
+    loop: true,
+    autoplay: {
+			delay: 3500,
+			disableOnInteraction: false,
+		},
+    navigation: {
+      nextEl: ".blog-aside__buttons .swiper-btn--next",
+      prevEl: ".blog-aside__buttons .swiper-btn--prev"
+    },
+    speed: 800
+  })
+}
+if (document.querySelector(".blog-cards__swiper")) {
+  const blogCardsSwiper = new Swiper(".blog-cards__swiper", {
+    slidesPerView: 1,
+    spaceBetween: 25,
+    observe: true,
+    observeParents: true,
+    loop: false,
+    breakpoints: {
+      991.98: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        loop: true,
+      },
+      500.98: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        loop: false,
+      }
+    },
+    scrollbar: {
+      el: '.blog-cards .swiper-scrollbar',
+      draggable: true,
+    },
+    navigation: {
+      nextEl: ".blog-cards__buttons .swiper-btn--next",
+      prevEl: ".blog-cards__buttons .swiper-btn--prev"
+    },
+    speed: 800
   })
 }

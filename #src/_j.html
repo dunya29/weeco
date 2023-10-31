@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {include 'head'}
+</head>
+
+<body>
+    <div class="page">
+        <div class="page__wrapper">
+            {include 'header'}
+            <main class="main">
+                {include 'crumbs'}
+                <div class="container">
+                    <div class="row g-5 js-form-address__row">
+                        <div class="col-lg-8">
+                            <h1 class="h1 pagetitle">Корзина</h1>
+                            {'!msCart' | snippet: [
+                            'tpl' => 'cart',
+                            'includeThumbs' => 'small',
+                            ]}
+                            <form id="msOrder" class="js-form-address form ms2_form" method="post">
+                                <div class="form__fieldset">
+                                    <h4 class="form__title">Данные получателя:</h4>
+
+                                    <div class="form__group">
+                                        <input type="text" id="receiver" placeholder="Получатель" name="receiver"
+                                            value="" class="form__input required">
+                                    </div>
+
+
+                                    <div class="row row-cols-sm-2 row-cols-1 g-0 g-lg-5 g-sm-3">
+                                        <div class="col">
+                                            <div class="form__group">
+                                                <input type="text" id="email" placeholder="Email" name="email" value=""
+                                                    class="form__input required">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form__group">
+                                                <input type="text" id="phone" placeholder="Телефон" name="phone"
+                                                    value="" class="form__input phonemask required">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__fieldset" id="deliveries">
+                                    <h4 class="form__title">Варианты доставки:</h4>
+                                    <label for="delivery_1" class="checkbox">
+                                        <input type="radio" name="delivery" value="1" id="delivery_1"
+                                            data-payments="[1,2,3,4,5]" checked=""><i></i>Самовывоз </label>
+                                    <label for="delivery_2" class="checkbox">
+                                        <input type="radio" name="delivery" value="2" id="delivery_2"
+                                            data-payments="[1,2,3,4,5]"><i></i>Доставка (рассчитывается менеджером
+                                        индивидуально) </label>
+                                </div>
+                                <div class="form__fieldset" id="cart-pickup">
+                                    <h4 class="form__title">Пункты самовывоза:</h4>
+                                    <label class="checkbox">
+                                        <input type="radio" name="pickup" value="1" checked=""><i></i>г. Чебоксары,
+                                        Вурнарское
+                                        шоссе д. 17, офис 311</label>
+                                    <label class="checkbox">
+                                        <input type="radio" name="pickup" value="2"><i></i>г. Мытищи,
+                                        Ярмарочная 5. Навес 4-2 Россия, Московская обл.</label>
+                                </div>
+                                <div class="form__fieldset" id="cart-address">
+                                    <h4 class="form__title">Адрес доставки:</h4>
+
+                                    <div class="form__group">
+                                        <input type="text" id="city" placeholder="Город" name="city" value=""
+                                            class="form__input required" autocomplete="off" data-kladr-type="city">
+                                    </div>
+
+
+                                    <div class="form__group">
+                                        <input type="text" id="street" placeholder="Улица" name="street" value=""
+                                            class="form__input required" autocomplete="off" data-kladr-type="street">
+                                    </div>
+
+                                    <div class="row g-0 g-lg-5 g-sm-3">
+
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                                            <div class="form__group">
+                                                <input type="text" id="building" placeholder="Дом" name="building"
+                                                    value="" class="form__input required" autocomplete="off"
+                                                    data-kladr-type="building">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                                            <div class="form__group">
+                                                <input type="text" id="floor" placeholder="Этаж" name="floor" value=""
+                                                    class="form__input">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                                            <div class="form__group">
+                                                <input type="text" id="room" placeholder="Кв." name="room" value=""
+                                                    class="form__input">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form__group">
+                                        <textarea rows="5" name="comment" id="comment" placeholder="Комментарий"
+                                            class="form__textarea"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form__fieldset" id="payments">
+                                    <h4 class="form__title">Способы оплаты:</h4>
+                                    <label for="payment_1" class="checkbox">
+                                        <input type="radio" name="payment" value="1" id="payment_1"
+                                            checked=""><i></i>Оплата наличными </label>
+                                    <label for="payment_2" class="checkbox">
+                                        <input type="radio" name="payment" value="2" id="payment_2"><i></i>Оплата по
+                                        карте </label>
+                                    <label for="payment_3" class="checkbox">
+                                        <input type="radio" name="payment" value="3" id="payment_3"><i></i>Оплата по
+                                        счету </label>
+                                    <label for="payment_4" class="checkbox">
+                                        <input type="radio" name="payment" value="4" id="payment_4"><i></i>Оплата по
+                                        QR коду </label>
+                                    <label for="payment_5" class="checkbox">
+                                        <input type="radio" name="payment" value="5" id="payment_5"><i></i>Оплата
+                                        наложенным платежом </label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-4 js-form-total">
+                            <div class="total-block">
+                                <div class="promocode">
+                                    <div class="mspc_form ">
+                                        <div class="h5 promocode-title">Промо-код</div>
+                                        <div class="promocode-form">
+                                            <input type="text" class="mspc_field " value=""
+                                                placeholder="Укажите промо-код">
+                                            <button class="mspc_btn"><span
+                                                    class="mobile-hidden">+</span><span>Применить</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="leaders">
+                                    <li class="total__block-count">
+                                        <div><span class="ms2_total_count">6</span> шт.</div>
+                                        <div><span class="rub" id="ms2_order_full_cost">3 900</span></div>
+                                    </li>
+                                    <li class="mspc_discount_amount">
+                                        <div>Скидка<span class="mobile-hidden"> по акции</span></div>
+                                        <div class="red_price"><span class="rub" id="ms2_order_cart_discount">-
+                                                198</span></div>
+                                    </li>
+                                    <li class="total__block-total">
+                                        <div class="mobile-hidden">Итого со скидкой</div>
+                                        <div><span class="rub" id="ms2_order_cost">3 155</span></div>
+                                    </li>
+                                </ul>
+                                <div class="promo-btn">Промокод</div>
+                                <button type="submit" name="ms2_action"
+                                    class="ms2_link button button--fluid button--primary">Оформить</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                {* {'!msOrder' | snippet: [
+                'tpl' => 'order',
+                ]} *}
+
+                {* {'!msGetOrder' | snippet: [
+                'tpl' => 'get_order',
+                ]} *}
+
+            </main>
