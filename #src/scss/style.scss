@@ -334,7 +334,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    background: url(../img/promo.svg) top left repeat-x;
+    background: url(../images/promo.svg) top left repeat-x;
     z-index: 2;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -2920,12 +2920,12 @@ h2.section__title span {
     width: 80px;
     height: 16px;
     position: relative;
-    background: url(../img/icons/rating.svg) repeat-x;
+    background: url(../images/icons/rating.svg) repeat-x;
     overflow: hidden;
     margin-right: 1rem;
 }
 .current-rating {
-    background: url(../img/icons/rating.svg) 0 -16px;
+    background: url(../images/icons/rating.svg) 0 -16px;
     position: absolute;
     height: 16px;
     top: 0;
@@ -2942,7 +2942,7 @@ h2.section__title span {
     input {
         display: none;
         &:hover ~ label {
-            background: url(../img/icons/rating.svg) 0 -32px;
+            background: url(../images/icons/rating.svg) 0 -32px;
         }
     }
     label {
@@ -2973,7 +2973,7 @@ blockquote {
         width: 46px;
         height: 46px;
         display: block;
-        background: url(../img/icons/blockquote.svg) center/contain no-repeat;
+        background: url(../images/icons/blockquote.svg) center/contain no-repeat;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
