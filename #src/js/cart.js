@@ -505,3 +505,36 @@ if (deliveries) {
 		})
 	})
 }
+const readMore = document.querySelectorAll(".read-more")
+function readMoreInit() {
+  if (readMore) {
+    readMore.forEach(item => {
+      item.style.height = "auto"
+      if (item.parentNode.querySelector(".read-more__btn")) {
+        item.parentNode.querySelector(".read-more__btn").remove()
+      }
+      if (item.clientHeight > 288 && window.innerWidth < 768) {
+        item.style.height = "288px"
+        item.insertAdjacentHTML("afterend", `<button class="btn read-more__btn">Подробнее</button>`)
+        let btn = item.parentNode.querySelector(".read-more__btn")
+        btn.addEventListener("click", () => {
+          if (!btn.classList.contains("active")) {
+            btn.textContent = "Закрыть"
+            item.style.height = "auto"
+            let height = item.clientHeight + 'px';
+            item.style.height = '288px';
+            setTimeout(function () {
+               item.style.height = height;
+            }, 0);
+          } else {
+            btn.textContent = "Подробнее"
+            item.style.height = "288px"
+          }
+          btn.classList.toggle("active")
+        })
+      } 
+    })
+  }
+}
+readMoreInit()
+window.addEventListener("resize", readMoreInit)

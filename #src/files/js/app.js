@@ -152,7 +152,7 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 
-    if ($(window).width() < 768 ) {
+   /*  if ($(window).width() < 768 ) {
         $('.read-more').readmore({
             speed: 75,
             moreLink: '<a href="#">Подробнее</a>',
@@ -160,4 +160,4 @@ Fancybox.bind("[data-fancybox]", {
             collapsedHeight: 218
         });
 
-    }
+    } */

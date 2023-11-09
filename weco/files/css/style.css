@@ -138,6 +138,11 @@
   overflow: hidden;
 }
 
+.hero {
+  height: auto !important;
+  min-height: calc(100vh - 140px);
+}
+
 .hero-promo {
   padding: 24px 0;
   position: absolute;
@@ -407,6 +412,17 @@
 .about-hero .breadcrumbs a,
 .about-hero .breadcrumbs span {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.read-more {
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.read-more__btn {
+  text-decoration: underline;
+  color: #85B73F !important;
 }
 
 .lazyload-video {
@@ -3362,7 +3378,7 @@ blockquote:after {
 
 @media (max-width: 575.98px) {
   .hero {
-    height: calc(90vh - 91px);
+    min-height: calc(90vh - 91px);
   }
 
   .hero-product .hero-advantages__title:before {

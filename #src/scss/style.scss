@@ -306,6 +306,10 @@
 .hero , .about-hero{
     overflow: hidden
 }
+.hero {
+    height: auto!important;
+    min-height: calc(100vh - 140px);
+}
 .hero-promo {
     padding: 24px 0;
     position: absolute;
@@ -555,7 +559,13 @@
 .about-hero .breadcrumbs a,.about-hero .breadcrumbs span {
     color: rgba(255,255,255,.7)
 }
-
+.read-more {
+    transition: all .4s ease-out;
+}
+.read-more__btn {
+    text-decoration: underline;
+    color: #85B73F !important;
+}
 .lazyload-video {
     cursor: pointer
 }
@@ -2689,7 +2699,7 @@ h2.section__title span {
 
 @media (max-width: 575.98px) {
     .hero {
-        height:calc(90vh - 91px);
+        min-height: calc(90vh - 91px)
     }
 
     .hero-product .hero-advantages__title:before {
