@@ -472,33 +472,35 @@ if (document.querySelector(".blog-aside__swiper")) {
   })
 }
 if (document.querySelector(".blog-cards__swiper")) {
-  const blogCardsSwiper = new Swiper(".blog-cards__swiper", {
-    slidesPerView: 1,
-    spaceBetween: 25,
-    observe: true,
-    observeParents: true,
-    loop: false,
-    breakpoints: {
-      991.98: {
-        slidesPerView: 3,
-        spaceBetween: 15,
-        loop: true,
+  document.querySelectorAll(".blog-cards__swiper").forEach(item => {
+    const blogCardsSwiper = new Swiper(item, {
+      slidesPerView: 1,
+      spaceBetween: 25,
+      observe: true,
+      observeParents: true,
+      loop: false,
+      breakpoints: {
+        991.98: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+          loop: true,
+        },
+        500.98: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+          loop: false,
+        }
       },
-      500.98: {
-        slidesPerView: 2,
-        spaceBetween: 15,
-        loop: false,
-      }
-    },
-    scrollbar: {
-      el: '.blog-cards .swiper-scrollbar',
-      draggable: true,
-    },
-    navigation: {
-      nextEl: ".blog-cards__buttons .swiper-btn--next",
-      prevEl: ".blog-cards__buttons .swiper-btn--prev"
-    },
-    speed: 800
+      scrollbar: {
+        el: item.parentNode.querySelector('.swiper-scrollbar'),
+        draggable: true,
+      },
+      navigation: {
+        nextEl: item.parentNode.querySelector('.blog-cards__buttons .swiper-btn--next'),
+        prevEl: item.parentNode.querySelector('.blog-cards__buttons .swiper-btn--prev')
+      },
+      speed: 800
+    })
   })
 }
 const readMore = document.querySelectorAll(".read-more")
