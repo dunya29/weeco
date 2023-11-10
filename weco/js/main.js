@@ -452,16 +452,6 @@ if (document.querySelector(".blog-toc")) {
       window.scrollTo({ top: windowTop + dest.getBoundingClientRect().top - 80, behavior: 'smooth' })
     })
   })
-/*   $('.blog-toc a').on('click', function () {
-    let txt = $(this).attr('href');
-console.log($(txt).offset().top)
-    $('html, body').animate({
-        scrollTop: $(txt).offset().top - 80
-    },  'slow');
-
-    return false;
-}); */
-
 }
 if (document.querySelector(".blog-aside__swiper")) {
   const blogAsideSwiper = new Swiper(".blog-aside__swiper", {
