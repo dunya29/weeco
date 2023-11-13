@@ -508,14 +508,14 @@ function readMoreInit() {
   if (readMore) {
     readMore.forEach(item => {
       if (window.innerWidth < 768 ) {
-        if (item.clientHeight < 288 ) {
+        if (item.clientHeight < 218 ) {
           item.style.height = "auto"
           if (item.parentNode.querySelector(".read-more__btn")) {
             item.parentNode.querySelector(".read-more__btn").remove()
           }
         } else {
           if (!item.parentNode.querySelector(".read-more__btn")) {
-            item.style.height = "288px"
+            item.style.height = "218px"
             item.insertAdjacentHTML("afterend", `<button class="btn read-more__btn">Подробнее</button>`)
             let btn = item.parentNode.querySelector(".read-more__btn")
             btn.addEventListener("click", () => {
@@ -523,13 +523,13 @@ function readMoreInit() {
                 btn.textContent = "Закрыть"
                 item.style.height = "auto"
                 let height = item.clientHeight + 'px';
-                item.style.height = '288px';
+                item.style.height = '218px';
                 setTimeout(function () {
                    item.style.height = height;
                 }, 0);
               } else {
                 btn.textContent = "Подробнее"
-                item.style.height = "288px"
+                item.style.height = "218px"
               }
               btn.classList.toggle("active")
             })
@@ -550,4 +550,3 @@ function readMoreInit() {
 }
 readMoreInit()
 window.addEventListener("resize", readMoreInit)
-window.addEventListener("resize", () => console.log("jjj"))
